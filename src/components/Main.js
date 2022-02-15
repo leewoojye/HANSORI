@@ -67,14 +67,14 @@ export default class Main extends Component {
                     {window.innerHeight > window.innerWidth ? (
                       // <div className="bounce" style={{ fontSize: '12vw' }}>
                       <div className="fadein" style={{ fontSize: "12vw" }}>
-                        동국대학교 <br />
-                        공과대 풍물패 <br />
-                        한소리
+                        동국대학교
+                        <br />
+                        공과대
+                        <br />
+                        풍물패
                       </div>
                     ) : (
-                      <div className="bounce">
-                        동국대학교 공과대 풍물패 한소리
-                      </div>
+                      <div className="bounce">동국대학교 공과대 풍물패</div>
                     )}
                   </div>
                   <div className="slide-cover">

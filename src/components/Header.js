@@ -45,14 +45,14 @@ const Header = ({ location, match, history }) => {
               <div style={{ color: "white" }}>
                 {window.localStorage.getItem("imageUrl") == null ? (
                   <img
-                    className="profile"
+                    style={{ borderRadius: "70%" }}
                     src={profile_white}
                     height="35"
                     alt=""
                   />
                 ) : (
                   <img
-                    className="profile"
+                    style={{ borderRadius: "70%" }}
                     src={
                       process.env.PUBLIC_URL +
                       window.localStorage.getItem("imageUrl")

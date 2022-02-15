@@ -44,10 +44,6 @@ a {
   align-items: center;
 }
 
-.profile {
-  border-radius: 70%;
-}
-
 .Footer {
   height: 50px;
   width: 100%;
@@ -315,4 +311,95 @@ a {
     opacity: 0;
     transform: rotate(45deg) translate(7px, 7px);
   }
+}
+
+.profile {
+  padding-top: 10vh;
+  width: 40vw;
+  height: 50vh;
+  background-color: white;
+  border-radius: 1%;
+}
+
+.googleLogin {
+  margin-top: 15vh;
+}
+
+.loginButton {
+  font-size: large;
+  color: gold;
+  font-weight: bold;
+  background: none;
+  padding-left: 1vw;
+}
+
+.loginButton:hover {
+  color: #ef0000;
+  cursor: pointer;
+}
+
+.signUpButton {
+  font-size: 20px;
+  color: white;
+  background-color: gold;
+  margin-top: 2vh;
+  padding: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 20px;
+}
+
+.signUpButton:hover {
+  background-color: #ef0000;
+  cursor: pointer;
+}
+
+.signUpDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 12vw;
+  height: 5vh;
+
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.signUp {
+  padding-bottom: 2vh;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+input:focus {
+  outline: none;
+}
+
+.signUpInput {
+  font-size: 20px;
+  width: 9vw;
+  height: 5vh;
+}
+
+.eyeSlash {
+  color: rgba(0, 0, 0, 0.25);
+}
+
+.eyeSlash:hover {
+  cursor: pointer;
+}
+
+.eye {
+  color: gold;
+}
+
+.eye:hover {
+  cursor: pointer;
+}
+
+.signUpImg {
+  margin: 5vh;
+  height: 10vh;
 }
