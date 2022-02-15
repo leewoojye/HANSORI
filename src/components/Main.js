@@ -77,6 +77,13 @@ export default class Main extends Component {
                       </div>
                     )}
                   </div>
+                  <div className="slide-cover">
+                    <div class="arrow">
+                      <span></span>
+                      <span></span>
+                      <span></span>
+                    </div>
+                  </div>
                 </div>
                 <div>
                   <h3>
@@ -96,11 +103,18 @@ export default class Main extends Component {
                       }}
                       alt=""
                     />
-                    <div className="slide-cover"></div>
+                    <div className="slide-cover">
+                      <div class="arrow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                      </div>
+                    </div>
                   </h3>
                 </div>
               </Slider>
             </div>
+
             <div className="section">
               <Test />
             </div>

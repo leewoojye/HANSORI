@@ -55,7 +55,7 @@ class Profile extends Component {
         ) : (
           <GoogleLogin
             clientId="835389304145-pll2ngg9i01e00vajc7svevd555h1g6b.apps.googleusercontent.com"
-            buttonText="Google 로그인"
+            buttonText="로그인"
             onSuccess={this.responseGoogle}
             onFailure={this.responseFail}
           />
