@@ -1,0 +1,119 @@
+.absoluteg {
+  position: absolute;
+  width: 500px;
+  height: 80px;
+  background: #ffffffa8;
+  background-blend-mode: multiply;
+  border: 3px solid #038000;
+  margin-left: 0px;
+  text-align: center;
+}
+.absolutey {
+  position: absolute;
+  width: 500px;
+  height: 90px;
+  background: #ffffff8e;
+  background-blend-mode: multiply;
+  border: 3px solid #ffd153;
+  margin-left: 0px;
+  text-align: center;
+}
+.absoluteo {
+  position: absolute;
+  width: 500px;
+  height: 80px;
+  background: #ffffff8e;
+  background-blend-mode: multiply;
+  border: 3px solid #e97101;
+  margin-left: 0px;
+  text-align: center;
+}
+.absoluteb {
+  position: absolute;
+  width: 500px;
+  height: 90px;
+  background: #ffffff8e;
+  background-blend-mode: multiply;
+  border: 3px solid #597ffa;
+  margin-left: 0px;
+  text-align: center;
+}
+.absolutebp {
+  position: absolute;
+  width: 500px;
+  height: 90px;
+  background: #ffffff8e;
+  background-blend-mode: multiply;
+  border: 3px solid #6667AB;
+  margin-left: 0px;
+  text-align: center;
+}
+.roundg {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to bottom, rgb(18, 117, 4), rgb(0, 0, 0));
+  border: 3px solid #038000;
+  margin-left: 0px;
+  border-radius:100px;
+  text-align: center;
+}
+
+.roundy {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to bottom, rgb(233, 191, 6), rgb(112, 64, 0));
+  border: 3px solid #ffd153;
+  margin-left: 0px;
+  border-radius:100px;
+  text-align: center;
+}
+
+.roundo {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to bottom, rgb(255, 136, 0), rgb(66, 27, 0));
+  border: 3px solid #e97101;
+  margin-left: 0px;
+  border-radius:100px;
+  text-align: center;
+}
+
+.roundb {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to bottom, rgb(48, 94, 243), rgb(0, 0, 15));
+  border: 3px solid #597ffa;
+
+  margin-left: 0px;
+  border-radius:100px;
+  text-align: center;
+}
+
+
+.roundbp {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background: linear-gradient(to bottom, rgb(122, 123, 202), rgb(15, 0, 15));
+  border: 3px solid #6667AB;
+
+  margin-left: 0px;
+  border-radius:100px;
+  text-align: center;
+}
+
+.last {
+  position: sticky;
+  width: 2000px;
+  height: 100px;
+  background: linear-gradient(to top, rgba(255, 217, 0, 0.699), rgb(20, 20, 173));
+  background-blend-mode: multiply;
+  border: 5px solid #ffffff;
+  text-align: center;
+  border-radius:100px;
+}
+
