@@ -65,6 +65,13 @@ export default class Main extends Component {
                     }}
                     alt=""
                   />
+                  {/* <div
+                    style={{
+                      width: "100vw",
+                      height: "100vh",
+                      backgroundColor: "#FFE4B5",
+                    }}
+                  /> */}
                   <div className="slide-cover">
                     {window.innerHeight > window.innerWidth ? (
                       // <div className="bounce" style={{ fontSize: '12vw' }}>
@@ -105,7 +112,13 @@ export default class Main extends Component {
                       }}
                       alt=""
                     />
-
+                    {/* <div
+                      style={{
+                        width: "100vw",
+                        height: "100vh",
+                        backgroundColor: "#FFC6C3",
+                      }}
+                    /> */}
                     <div className="slide-cover">
                       <div class="arrow">
                         <span></span>

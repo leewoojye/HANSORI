@@ -11,7 +11,11 @@ import Profile from "./components/Profile";
 import Test from "./components/Test";
 import Board from "./components/Board";
 import Pungmul from "./components/Pungmul";
-import history from "./components/history";
+import Kkwaenggwari from "./components/Kkwaenggwari";
+import Janggu from "./components/Janggu";
+import Drum from "./components/Drum";
+import Jing from "./components/Jing";
+import Sogo from "./components/Sogo";
 
 function App() {
   return (
@@ -25,8 +29,12 @@ function App() {
       <Route path="/profile" component={Profile} />
       <Route path="/test" component={Test} />
       <Route path="/board" component={Board} />
-      <Route path="/pungmul" component={Pungmul} />
-      <Route path="/history" component={history} />
+      <Route path="/pungmul" exact={true} component={Pungmul} />
+      <Route path="/pungmul/kkwaenggwari" component={Kkwaenggwari} />
+      <Route path="/pungmul/janggu" component={Janggu} />
+      <Route path="/pungmul/drum" component={Drum} />
+      <Route path="/pungmul/jing" component={Jing} />
+      <Route path="/pungmul/sogo" component={Sogo} />
       <Footer />
     </>
   );

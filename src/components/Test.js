@@ -20,12 +20,12 @@ let styles = {
   today: css`
     /* highlight today by making the text red and giving it a red border */
     color: #ef0000;
-    border: 2px solid #ef0000;
+    border: 3px solid #ef0000;
   `,
 
   day: css`
     background-color: white;
-    border: 2px solid black;
+    border: 3px solid #fab7b7;
   `,
 };
 
@@ -34,7 +34,7 @@ const language = "EN";
 class Test extends React.Component {
   render() {
     return (
-      <div style={{ backgroundColor: "black" }}>
+      <div style={{ backgroundColor: "#FAB7B7" }}>
         <div style={{ height: "75px" }}></div>
         <Calendar
           apiKey={API_KEY}

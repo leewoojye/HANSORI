@@ -473,6 +473,10 @@ input:focus {
   cursor: pointer;
 }
 
+.inst:active {
+  transform: rotate(0.5turn);
+}
+
 .showName:hover .text {
   opacity: 1;
   font-size: 20px;
