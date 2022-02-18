@@ -12,6 +12,8 @@ import whiteArrow from "../asset/main/arrow.png";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Test from "./Test";
 
+import instrument_white from "../asset/main/instrument_white.png";
+
 function Arrow(props) {
   const { onClick, image, next } = props;
   return (
@@ -103,6 +105,7 @@ export default class Main extends Component {
                       }}
                       alt=""
                     />
+
                     <div className="slide-cover">
                       <div class="arrow">
                         <span></span>

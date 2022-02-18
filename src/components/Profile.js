@@ -3,7 +3,7 @@ import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 
-const pbpw = "901829";
+const pbpw = "901829"; //////////////
 
 class Profile extends Component {
   constructor(props) {
@@ -70,11 +70,11 @@ class Profile extends Component {
       <div
         className="contents"
         style={{
-          height: "80vh",
-          paddingTop: "20vh",
-          backgroundColor: "black",
+          height: "100vh",
+          backgroundColor: "#1E90FF",
           display: "flex",
           justifyContent: "center",
+          alignItems: "center",
         }}
       >
         <div className="profile">
@@ -129,7 +129,8 @@ class Profile extends Component {
                 </button>
               </div>
             </div>
-          ) : !this.state.signUping ? (
+          ) : // ) : this.state.signUping ? (
+          !this.state.signUping ? (
             <div
               style={{
                 color: "black",

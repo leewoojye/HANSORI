@@ -1,5 +1,4 @@
 import React from "react";
-import styled from "styled-components";
 import logo_white from "../asset/header/logo_white.png";
 import profile_white from "../asset/header/profile_white.png";
 import { NavLink, withRouter } from "react-router-dom";
@@ -31,7 +30,13 @@ const Header = ({ location, match, history }) => {
               게시판
             </NavLink>
             <NavLink className="Menu" to="/pungmul">
-              풍물
+              <div
+                onClick={() => {
+                  window.localStorage.clear("changeColor");
+                }}
+              >
+                풍물
+              </div>
             </NavLink>
             {/* <NavLink className="Menu" to="/pungsa">
               풍사
@@ -43,7 +48,7 @@ const Header = ({ location, match, history }) => {
           <div className="styled_profile">
             <NavLink className="Menu" to="/profile">
               <div style={{ color: "white" }}>
-                {window.localStorage.getItem("imageUrl") == null ? (
+                {window.localStorage.getItem("isLogin") == null ? (
                   <img
                     style={{ borderRadius: "70%" }}
                     src={profile_white}
