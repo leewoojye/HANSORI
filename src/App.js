@@ -16,6 +16,8 @@ import Janggu from "./components/Janggu";
 import Drum from "./components/Drum";
 import Jing from "./components/Jing";
 import Sogo from "./components/Sogo";
+import history from "./components/history";
+import popup from "./components/popup";
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
       <Route path="/pungmul/drum" component={Drum} />
       <Route path="/pungmul/jing" component={Jing} />
       <Route path="/pungmul/sogo" component={Sogo} />
+      <Route path="/popup" component={popup} />
+      <Route path="/history" component={history} />
       <Footer />
     </>
   );
