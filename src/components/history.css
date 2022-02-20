@@ -8,7 +8,7 @@
 }
 
 .history .headera {
-  margin-right:37%;
+  margin-right: 37%;
   line-height: 1%;
 }
 .history .headerb {
@@ -16,9 +16,9 @@
   line-height: 1%;
   text-align: center;
 }
- /*위의 부분은 맨위 헤더?에 관한 것*/
+/*위의 부분은 맨위 헤더?에 관한 것*/
 
- .history .headerleftr {
+.history .headerleftr {
   line-height: 55px;
   margin-left: 20%;
 }
@@ -42,7 +42,7 @@
 
 .history .headerleftu {
   line-height: 120px;
-  text-align: center; 
+  text-align: center;
   margin-left: 5.3vw;
 }
 
@@ -55,23 +55,19 @@
 
 .history .headerlelast {
   line-height: 150px;
-  text-align: center; 
+  text-align: center;
   margin-left: 14.7vw;
 }
-
 
 .history .headerleftd {
   margin-left: 1%;
   line-height: 60%;
   text-align: left;
-  
 }
-
-
 
 .history .lastsay {
   line-height: 5px;
-  text-align: center; 
+  text-align: center;
   margin-right: 80%;
   margin-left: 15px;
 }
@@ -80,7 +76,7 @@
 }
 .history .headerlef {
   line-height: 80px;
-  text-align: center; 
+  text-align: center;
   margin-right: 40px;
 }
 .history .right {
@@ -88,26 +84,24 @@
   line-height: 10px;
 }
 
-
 .history .headerlelastf {
   line-height: 100px;
-  text-align: center; 
+  text-align: center;
   margin-right: 40px;
 }
 
 .history.header {
   height: 50px;
   width: 100%;
-  padding: 10px ;
+  padding: 10px;
 }
 
 .history .pop {
   line-height: 80px;
-  text-align: center; 
+  text-align: center;
   margin-left: 100px;
 }
 .history .popa {
   line-height: 50px;
-  text-align: center; 
- 
+  text-align: center;
 }

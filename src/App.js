@@ -18,12 +18,14 @@ import Jing from "./components/Jing";
 import Sogo from "./components/Sogo";
 import history from "./components/history";
 import popup from "./components/popup";
+import Main2 from "./components/Main2";
 
 function App() {
   return (
     <>
       <Header />
-      <Route path="/" exact={true} component={Main} />
+      {/* <Route path="/" exact={true} component={Main} /> */}
+      <Route path="/" exact={true} component={Main2} />
       <Route path="/about" component={About} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/pungsa" component={Pungsa} />

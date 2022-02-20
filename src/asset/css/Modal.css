@@ -1,4 +1,4 @@
-.modal{
+.modal {
   background-color: #fff;
   width: 900px;
   height: 500px;
@@ -13,8 +13,8 @@
   border-radius: 16px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
 }
-  
-  .close-after{
+
+.close-after {
   background: gray;
   z-index: 5;
   cursor: pointer;
@@ -42,7 +42,7 @@
   visibility: hidden;
 }
 
-.contents {
+.modalContents {
   width: 500px;
   height: auto;
   display: flex;
@@ -52,7 +52,7 @@
   background-color: rgba(255, 255, 255, 0);
 }
 
-.contents .upload-box {
+.modalContents .upload-box {
   width: 100%;
   margin-top: 0px;
   margin-right: 50px;
@@ -63,7 +63,7 @@
   color: black;
 }
 
-.contents .upload-box .drag-file {
+.modalContents .upload-box .drag-file {
   position: relative;
   width: 100%;
   height: 360px;
@@ -84,14 +84,14 @@
   text-align: center;
   padding-left: 50px;
   padding-right: 50px;
-  padding-top: 10px ;
-  padding-bottom: 10px ;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 25px;
   border-radius: 15px;
   cursor: pointer;
 }
 
-.delete-button{
+.delete-button {
   position: relative;
   margin-top: 30px;
   left: 400px;
@@ -102,15 +102,15 @@
   text-shadow: 1px 1px 2px gray;
   padding-left: 75px;
   padding-right: 75px;
-  padding-top: 10px ;
-  padding-bottom: 10px ;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 25px;
   width: 65%;
   border-radius: 15px;
-  cursor: pointer;                    
+  cursor: pointer;
 }
 
-.upload-button{
+.upload-button {
   position: relative;
   margin-top: 30px;
   left: 527px;
@@ -121,8 +121,8 @@
   text-shadow: 1px 1px 2px gray;
   padding-left: 65px;
   padding-right: 65px;
-  padding-top: 10px ;
-  padding-bottom: 10px ;
+  padding-top: 10px;
+  padding-bottom: 10px;
   font-size: 25px;
   width: 65%;
   border-radius: 15px;

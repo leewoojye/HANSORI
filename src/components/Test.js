@@ -6,7 +6,7 @@ const API_KEY = "AIzaSyDcnoFRHVqc-Hn9jSIp2fWgXJi2bxLuhpM";
 let calendars = [
   {
     calendarId: "sbbp3lj7128ajkcs362lvi76vg@group.calendar.google.com",
-    color: "gold",
+    color: "#728434",
   }, //add a color field to specify the color of a calendar
 ];
 
@@ -19,13 +19,13 @@ let styles = {
   //you can also use emotion's string styles
   today: css`
     /* highlight today by making the text red and giving it a red border */
-    color: #ef0000;
-    border: 3px solid #ef0000;
+    color: #c25e5e;
+    border: 3px solid #c25e5e;
   `,
 
   day: css`
-    background-color: white;
-    border: 3px solid #fab7b7;
+    background-color: #fff5f4;
+    border: 3px solid #bfa5a4;
   `,
 };
 
@@ -34,7 +34,7 @@ const language = "EN";
 class Test extends React.Component {
   render() {
     return (
-      <div style={{ backgroundColor: "#FAB7B7" }}>
+      <div style={{ backgroundColor: "#BFA5A4" }}>
         <div style={{ height: "75px" }}></div>
         <Calendar
           apiKey={API_KEY}

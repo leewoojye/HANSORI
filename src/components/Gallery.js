@@ -29,11 +29,12 @@ import pic22 from "../asset/gallery/pic22.jpg";
 import pic23 from "../asset/gallery/pic23.jpg";
 import pic25 from "../asset/gallery/pic25.jpg";
 
-
 export default function Gallery() {
   const IMAGES = [
     {
       src: pic1,
+      lightboxCaption: "캡션",
+      lightboxTitle: "타이틀",
     },
     {
       src: pic2,
@@ -113,59 +114,64 @@ export default function Gallery() {
     setIsOpen(false);
   }
 
-    //파일 미리볼 url을 저장해줄 state
-    const [fileImage, setFileImage] = useState("");
-  
-    // 파일 저장
-    const saveFileImage = (e) => {
-      setFileImage(URL.createObjectURL(e.target.files[0]));
-    };
-  
-    // 파일 삭제
-    const deleteFileImage = () => {
-      URL.revokeObjectURL(fileImage);
-      setFileImage("");
-    };
+  //파일 미리볼 url을 저장해줄 state
+  const [fileImage, setFileImage] = useState("");
 
+  // 파일 저장
+  const saveFileImage = (e) => {
+    setFileImage(URL.createObjectURL(e.target.files[0]));
+  };
+
+  // 파일 삭제
+  const deleteFileImage = () => {
+    URL.revokeObjectURL(fileImage);
+    setFileImage("");
+  };
 
   return (
     <div className="gallery_background">
       <div className="gallery_header" />
-       <button onClick={openModal}>
-          <BsPlusSquare className="plus" />
-       </button>
-      <Modal className="modal"
-          isOpen={modalIsOpen}
-          onRequestClose={closeModal}
-          contentLabel="Example Modal"
-       >
-
+      <button onClick={openModal}>
+        <BsPlusSquare className="plus" />
+      </button>
+      <Modal
+        className="modal"
+        isOpen={modalIsOpen}
+        onRequestClose={closeModal}
+        contentLabel="Example Modal"
+      >
         <div>
-          <div class="contents">
+          <div class="modalContents">
             <div class="upload-box">
               <div id="drop-file" class="drag-file">
-                <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘" class="image" />
-                  <p class="message">이미지 없음</p>
-                    {fileImage && (
-                           <img 
-                            alt="sample"
-                            src={fileImage}
-                            style={{ margin: "auto" ,
-                            width: "450px",
-                            height: "360px",
-                            position: "absolute"
-                            }}
-                           />
-                      )}
-        
+                <img
+                  src="https://img.icons8.com/pastel-glyph/2x/image-file.png"
+                  alt="파일 아이콘"
+                  class="image"
+                />
+                <p class="message">이미지 없음</p>
+                {fileImage && (
+                  <img
+                    alt="sample"
+                    src={fileImage}
+                    style={{
+                      margin: "auto",
+                      width: "450px",
+                      height: "360px",
+                      position: "absolute",
+                    }}
+                  />
+                )}
               </div>
               <div
                 style={{
-                alignItems: "center",
-                justifyContent: "center",
+                  alignItems: "center",
+                  justifyContent: "center",
                 }}
               >
-                <label class="file-label" for="chooseFile">사진 선택</label>
+                <label class="file-label" for="chooseFile">
+                  사진 선택
+                </label>
                 <input
                   id="chooseFile"
                   name="imgUpload"
@@ -173,26 +179,31 @@ export default function Gallery() {
                   accept="image/*"
                   onChange={saveFileImage}
                 />
-  
-                <label class="upload-button" for="submit">업로드</label> 
+
+                <label class="upload-button" for="submit">
+                  업로드
+                </label>
                 <input
                   id="chooseFile"
                   name="imgUpload"
                   type="file"
-                  accept="image/*" 
+                  accept="image/*"
                   onChange={saveFileImage}
-                /> 
-                    
-                <label class="delete-button" onClick={() => deleteFileImage()}>삭제</label>
-              </div>     
+                />
+
+                <label class="delete-button" onClick={() => deleteFileImage()}>
+                  삭제
+                </label>
+              </div>
             </div>
           </div>
         </div>
 
-      <button className="close-after" onClick={closeModal}>X</button>
-
+        <button className="close-after" onClick={closeModal}>
+          X
+        </button>
       </Modal>
-      
+
       {/* {modalVisible && (
         <UploadImage
           visible={modalVisible}

@@ -6,6 +6,7 @@
 
 @font-face {
   font-family: "NamsanM";
+  /* src: url("./SeoulHangangM.ttf"); */
   src: url("./SeoulNamsanM.ttf");
   font-weight: normal;
   font-style: normal;
@@ -26,7 +27,7 @@ a {
 }
 
 .Menu:hover {
-  color: #ef0000;
+  color: #530004;
   font-weight: bolder;
 }
 
@@ -197,7 +198,7 @@ a {
   height: 75px;
   display: flex;
   justify-content: space-between;
-  background-color: rgba(0, 0, 0, 0.2);
+  /* background-color: rgba(0, 0, 0, 0.2); */
   align-items: center;
   position: fixed;
   top: 0;
@@ -285,10 +286,10 @@ a {
 }
 .arrow span {
   display: block;
-  width: 12px;
-  height: 12px;
-  border-bottom: 1.7px solid gold;
-  border-right: 1.7px solid gold;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid gold;
+  border-right: 2px solid gold;
   transform: rotate(45deg);
   margin: -5px;
   animation: animate 2s infinite;
@@ -302,14 +303,14 @@ a {
 @keyframes animate {
   0% {
     opacity: 0;
-    transform: rotate(45deg) translate(-7px, -7px);
+    transform: rotate(45deg) translate(-5px, -5px);
   }
   50% {
     opacity: 1;
   }
   100% {
     opacity: 0;
-    transform: rotate(45deg) translate(7px, 7px);
+    transform: rotate(45deg) translate(5px, 5px);
   }
 }
 
@@ -493,4 +494,57 @@ input:focus {
 .changeColor:hover {
   filter: invert(100%);
   cursor: pointer;
+}
+
+.ril__toolbarItemChild {
+  vertical-align: middle;
+  color: red;
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: "NamsanEB";
+  /* src: url("./SeoulHangangM.ttf"); */
+  src: url("./SeoulNamsanEB.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.section1 {
+  font-family: "NamsanEB";
+  display: flex;
+  padding: 10vh 10vw 10vh 10vw;
+}
+
+.mainDiv1 {
+  font-size: 50px;
+  width: 45vw;
+}
+
+.mainDiv2 {
+  font-size: 40px;
+  margin-left: 1vw;
+  width: 34vw;
+  border-radius: 0 20px 20px 0;
+  background-color: #f3eed9;
+}
+
+.mainDiv3 {
+  text-align: right;
+  padding: 10px;
+  color: #f3eed9;
+  border-radius: 0 0 0 20px;
+  background-color: #728434;
+}
+
+.mainImg1 {
+  width: 45vw;
+  height: auto;
+  border-radius: 20px 0 0 0;
+  transition-duration: 0.2s;
+}
+
+.mainImg1:hover {
+  cursor: pointer;
+  filter: brightness(90%);
 }
