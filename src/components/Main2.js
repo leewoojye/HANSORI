@@ -16,9 +16,9 @@ export default class Main2 extends Component {
         scrollOverflow={true}
         render={({ state, fullpageApi }) => (
           <div id="fullpage-wrapper">
-            <div className="section" style={{ backgroundColor: "#c25e5e" }}>
-              <div className="section1">
-                <div className="mainDiv1">
+            <div className="section " style={{ backgroundColor: "#c25e5e" }}>
+              <div className="section1 ">
+                <div className="mainDiv1 ">
                   <img
                     src={main1}
                     alt=""
@@ -32,7 +32,7 @@ export default class Main2 extends Component {
                 </div>
                 <div className="mainDiv2"></div>
               </div>
-              <div class="arrow">
+              <div class="arrow" onClick={() => fullpageApi.moveSectionDown()}>
                 <span></span>
                 <span></span>
                 <span></span>

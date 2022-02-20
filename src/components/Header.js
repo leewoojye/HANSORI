@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import logo_white from "../asset/header/logo_white.png";
 import profile_white from "../asset/header/profile_white.png";
 import { NavLink, withRouter } from "react-router-dom";
@@ -6,16 +6,17 @@ import "../asset/css/Header.css";
 import $ from "jquery";
 
 const Header = ({ location, match, history }) => {
-useEffect(() => {
-  $(document).ready(() => {
-    $(".dropdown")
-      .on("mouseenter", function() {
-        $(this).children(".dropdown-content").stop().slideDown(250);
-      }).on("mouseleave", function() {
-        $(this).children(".dropdown-content").stop().slideUp(250);
-      });
-  });
-}, []);
+  useEffect(() => {
+    $(document).ready(() => {
+      $(".dropdown")
+        .on("mouseenter", function () {
+          $(this).children(".dropdown-content").stop().slideDown(200);
+        })
+        .on("mouseleave", function () {
+          $(this).children(".dropdown-content").stop().slideUp(200);
+        });
+    });
+  }, []);
 
   return (
     <>
@@ -33,7 +34,7 @@ useEffect(() => {
             </NavLink>
           </div>
           <div className="styled_menu">
-          <div className="dropdown">
+            <div className="dropdown">
               <NavLink className="Menu" to="/about">
                 동아리
               </NavLink>
@@ -55,7 +56,6 @@ useEffect(() => {
                 <a href="#">자유게시판</a>
                 <a href="#">정보게시판</a>
                 <a href="#">질문게시판</a>
-                <a href="#">풍사</a>
               </div>
             </div>
             <NavLink className="Menu" to="/pungmul">

@@ -6,7 +6,7 @@ const API_KEY = "AIzaSyDcnoFRHVqc-Hn9jSIp2fWgXJi2bxLuhpM";
 let calendars = [
   {
     calendarId: "sbbp3lj7128ajkcs362lvi76vg@group.calendar.google.com",
-    color: "#728434",
+    color: "#CA8291",
   }, //add a color field to specify the color of a calendar
 ];
 

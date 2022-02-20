@@ -30,7 +30,7 @@ function Pungmul() {
         className="contents"
         style={{
           height: "100vh",
-          backgroundColor: "gold",
+          backgroundColor: "#C2A75E",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

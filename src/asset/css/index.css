@@ -27,7 +27,7 @@ a {
 }
 
 .Menu:hover {
-  color: #530004;
+  color: #f3eed9;
   font-weight: bolder;
 }
 
@@ -283,6 +283,9 @@ a {
   top: 95%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+.arrow:hover {
+  cursor: pointer;
 }
 .arrow span {
   display: block;
