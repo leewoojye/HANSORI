@@ -11,7 +11,6 @@ import Profile from "./components/Profile";
 import Test from "./components/Test";
 import Board from "./components/Board";
 import Pungmul from "./components/Pungmul";
-import lyj from "./components/lyj";
 
 function App() {
   return (
@@ -26,7 +25,6 @@ function App() {
       <Route path="/test" component={Test} />
       <Route path="/board" component={Board} />
       <Route path="/pungmul" component={Pungmul} />
-      <Route path="/lyj" component={lyj} />
       <Footer />
     </>
   );
