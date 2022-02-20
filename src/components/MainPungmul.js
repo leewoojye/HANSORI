@@ -23,14 +23,13 @@ const Test = styled.button`
   height: 75px;
 `;
 
-function Pungmul() {
+function MainPungmul() {
   return (
     <>
       <div
         className="contents"
         style={{
-          height: "100vh",
-          backgroundColor: "#ecb959",
+          backgroundColor: "#eec26f",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -44,13 +43,13 @@ function Pungmul() {
                 className="inst"
                 src={inst1}
                 alt=""
-                style={{ width: "46px" }}
+                style={{ width: "37px", paddingBottom: "10px" }}
                 onClick={() => {
                   setTimeout(500);
                 }}
               />
             </DelayLink>
-            <div className="text">쇠</div>
+            {/* <div className="mainText">쇠</div> */}
           </div>
           <div className="showName">
             <DelayLink delay={300} to="/pungmul/janggu">
@@ -58,10 +57,10 @@ function Pungmul() {
                 className="inst"
                 src={inst2}
                 alt=""
-                style={{ width: "112px" }}
+                style={{ width: "90px", paddingBottom: "10px" }}
               />
             </DelayLink>
-            <div className="text">장구</div>
+            {/* <div className="mainText">장구</div> */}
           </div>
           <div className="showName">
             <DelayLink delay={300} to="/pungmul/drum">
@@ -69,10 +68,10 @@ function Pungmul() {
                 className="inst"
                 src={inst3}
                 alt=""
-                style={{ width: "86px" }}
+                style={{ width: "69px", paddingBottom: "10px" }}
               />
             </DelayLink>
-            <div className="text">북</div>
+            {/* <div className="mainText">북</div> */}
           </div>
           <div className="showName">
             <DelayLink delay={300} to="/pungmul/jing">
@@ -80,10 +79,10 @@ function Pungmul() {
                 className="inst"
                 src={inst4}
                 alt=""
-                style={{ width: "96px" }}
+                style={{ width: "77px", paddingBottom: "10px" }}
               />
             </DelayLink>
-            <div className="text">징</div>
+            {/* <div className="mainText">징</div> */}
           </div>
           <div className="showName">
             <DelayLink delay={300} to="/pungmul/sogo">
@@ -91,10 +90,10 @@ function Pungmul() {
                 className="inst"
                 src={inst5}
                 alt=""
-                style={{ width: "64px" }}
+                style={{ width: "51px", paddingBottom: "10px" }}
               />
             </DelayLink>
-            <div className="text">소고</div>
+            {/* <div className="mainText">소고</div> */}
           </div>
           <NavLink to="/pungmul">
             <img
@@ -102,10 +101,7 @@ function Pungmul() {
               backgroundColor="red"
               src={instEnd}
               alt=""
-              style={{ width: "5px" }}
-              onClick={() => {
-                window.localStorage.setItem("changeColor", true);
-              }}
+              style={{ width: "3px", paddingBottom: "10px" }}
             />
           </NavLink>
         </div>
@@ -114,4 +110,4 @@ function Pungmul() {
   );
 }
 
-export default Pungmul;
+export default MainPungmul;

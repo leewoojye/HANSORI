@@ -30,7 +30,14 @@ const Header = ({ location, match, history }) => {
                 if (location.pathname === "/") window.location.reload();
               }}
             >
-              <img src={logo_white} height="35" alt="" />
+              <img
+                src={logo_white}
+                height="35"
+                alt=""
+                onClick={() => {
+                  window.localStorage.removeItem("changeColor");
+                }}
+              />
             </NavLink>
           </div>
           <div className="styled_menu">

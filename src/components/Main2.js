@@ -5,9 +5,11 @@ import slide3 from "../asset/main/slide3.jpg";
 
 import main1 from "../asset/main/main1.jpg";
 import main2 from "../asset/main/main2.jpg";
+import seal from "../asset/main/seal.png";
 
 import ReactFullpage from "@fullpage/react-fullpage";
 import Test from "./Test";
+import MainPungmul from "./MainPungmul";
 
 export default class Main2 extends Component {
   render() {
@@ -30,8 +32,22 @@ export default class Main2 extends Component {
                     <br />
                   </div>
                 </div>
-                <div className="mainDiv2"></div>
+                <div className="mainDiv4">
+                  {/* <div className="mainDiv2"> */}
+                  <MainPungmul />
+                  <div className="sealDiv">
+                    <img
+                      src={seal}
+                      className="seal"
+                      alt=""
+                      onClick={() => {
+                        window.location.href = "./about";
+                      }}
+                    />
+                  </div>
+                </div>
               </div>
+
               <div class="arrow" onClick={() => fullpageApi.moveSectionDown()}>
                 <span></span>
                 <span></span>
