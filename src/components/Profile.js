@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import memberList from "./memberList.json";
 
 const pbpw = "901829"; //////////////
 
@@ -20,31 +21,84 @@ class Profile extends Component {
     };
   }
 
+  // isMember = (email) => {
+  //   // let check = false;
+  //   // memberList.map((member) => {
+  //   //   if (email == member.email) check = true;
+  //   // });
+  //   // return check;
+
+  //   console.log("ismember");
+
+  // };
+
   // Google SignIn
   responseGoogleSignIn = (res) => {
-    this.setState({
-      id: res.googleId,
-      name: res.profileObj.name,
-      email: res.profileObj.email,
-      imageUrl: res.profileObj.imageUrl,
-    });
+    const post = {
+      query:
+        "SELECT EXISTS (SELECT * FROM MEMBER WHERE Email='" +
+        res.profileObj.email +
+        "' LIMIT 1) AS SUCCESS;", //mysql로 전송할 쿼리 문
+    };
 
-    window.localStorage.setItem("imageUrl", this.state.imageUrl);
-    window.localStorage.setItem("isLogin", true);
-    window.location.reload();
+    fetch("http://localhost:8082/SQL1", {
+      //mysql fetch 서버 주소
+      method: "post", // 통신방법
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(post),
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.SUCCESS) {
+          this.setState({
+            id: res.googleId,
+            name: res.profileObj.name,
+            email: res.profileObj.email,
+            imageUrl: res.profileObj.imageUrl,
+          });
+
+          window.localStorage.setItem("imageUrl", this.state.imageUrl);
+          window.localStorage.setItem("isLogin", true);
+          window.location.reload();
+        } else {
+          this.setState({ signUp: true });
+          alert("등록된 회원이 아닙니다. 회원가입을 진행해주세요.");
+        }
+      });
   };
 
   // Google SignUp
   responseGoogleSignUp = (res) => {
-    this.setState({
-      id: res.googleId,
-      name: res.profileObj.name,
-      email: res.profileObj.email,
-      imageUrl: res.profileObj.imageUrl,
-      signUping: true,
-    });
+    const post = {
+      query:
+        "SELECT EXISTS (SELECT * FROM MEMBER WHERE Email='" +
+        res.profileObj.email +
+        "' LIMIT 1) AS SUCCESS;", //mysql로 전송할 쿼리 문
+    };
 
-    window.localStorage.setItem("imageUrl", this.state.imageUrl);
+    fetch("http://localhost:8082/SQL1", {
+      //mysql fetch 서버 주소
+      method: "post", // 통신방법
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(post),
+    })
+      .then((res) => res.json())
+      .then((json) => {
+        if (json.SUCCESS) {
+          alert("이미 등록된 회원입니다.");
+          this.setState({ signUp: false });
+        } else {
+          this.setState({
+            id: res.googleId,
+            name: res.profileObj.name,
+            email: res.profileObj.email,
+            imageUrl: res.profileObj.imageUrl,
+            signUping: true,
+          });
+
+          window.localStorage.setItem("imageUrl", this.state.imageUrl);
+        }
+      });
   };
 
   // Login Fail
@@ -79,11 +133,13 @@ class Profile extends Component {
       >
         <div className="profile">
           {window.localStorage.getItem("isLogin") ? (
-            <GoogleLogout
-              clientId="835389304145-pll2ngg9i01e00vajc7svevd555h1g6b.apps.googleusercontent.com"
-              buttonText="로그아웃"
-              onLogoutSuccess={this.onLogout}
-            ></GoogleLogout>
+            <div className="googleLogin">
+              <GoogleLogout
+                clientId="835389304145-pll2ngg9i01e00vajc7svevd555h1g6b.apps.googleusercontent.com"
+                buttonText="로그아웃"
+                onLogoutSuccess={this.onLogout}
+              ></GoogleLogout>
+            </div>
           ) : !this.state.signUp ? (
             <div
               style={{
@@ -230,6 +286,19 @@ class Profile extends Component {
                   className="signUpButton"
                   onClick={() => {
                     if (this.state.pbpwInput == pbpw) {
+                      const post = {
+                        query:
+                          "INSERT INTO MEMBER VALUES ('" +
+                          this.state.email +
+                          "'," +
+                          0 +
+                          ");",
+                      };
+                      fetch("http://localhost:8082/SQL1", {
+                        method: "post",
+                        headers: { "content-type": "application/json" },
+                        body: JSON.stringify(post),
+                      });
                       alert("회원가입이 완료되었습니다.");
                       window.localStorage.clear();
                       window.location.reload();

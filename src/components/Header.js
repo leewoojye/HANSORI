@@ -32,18 +32,12 @@ const Header = ({ location, match, history }) => {
             <NavLink className="Menu" to="/pungmul">
               <div
                 onClick={() => {
-                  window.localStorage.clear("changeColor");
+                  window.localStorage.removeItem("changeColor");
                 }}
               >
                 풍물
               </div>
             </NavLink>
-            {/* <NavLink className="Menu" to="/pungsa">
-              풍사
-            </NavLink> */}
-            {/* <NavLink className="Menu" to="/jokbo">
-              족보
-            </NavLink> */}
           </div>
           <div className="styled_profile">
             <NavLink className="Menu" to="/profile">

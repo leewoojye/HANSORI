@@ -1,18 +1,14 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-// import "../asset/css/slick/slick-theme.css";
 import "../asset/css/slick/slick.css";
 import "../asset/css/Slide.css";
 
 import slide1 from "../asset/main/slide1.png";
-// import slide2 from '../asset/main/slide2.jpg';
 import slide3 from "../asset/main/slide3.jpg";
 import whiteArrow from "../asset/main/arrow.png";
 
 import ReactFullpage from "@fullpage/react-fullpage";
 import Test from "./Test";
-
-import instrument_white from "../asset/main/instrument_white.png";
 
 function Arrow(props) {
   const { onClick, image, next } = props;
@@ -21,7 +17,7 @@ function Arrow(props) {
       className={next ? "slide-button" : "slide-button slide-prev"}
       onClick={onClick}
     >
-      <img src={image} />
+      <img src={image} alt="" />
     </div>
   );
 }
