@@ -1,0 +1,140 @@
+.modal{
+  background-color: #fff;
+  width: 900px;
+  height: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.5);
+}
+  
+  .close-after{
+  background: gray;
+  z-index: 5;
+  cursor: pointer;
+  width: 60px;
+  height: 60px;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  position: absolute;
+  left: 50%;
+  bottom: 0px;
+  color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.3);
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translate(-50%, 50%);
+}
+
+#chooseFile {
+  visibility: hidden;
+}
+
+.contents {
+  width: 500px;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-right: 200px;
+  background-color: rgba(255, 255, 255, 0);
+}
+
+.contents .upload-box {
+  width: 100%;
+  margin-top: 0px;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+.contents .upload-box .drag-file {
+  position: relative;
+  width: 100%;
+  height: 360px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 3px dashed #dbdbdb;
+}
+
+.file-label {
+  position: relative;
+  bottom: 300px;
+  left: 525px;
+  background-color: #ff6b6b;
+  text-shadow: 1px 1px 2px gray;
+  color: #fff;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 10px ;
+  padding-bottom: 10px ;
+  font-size: 25px;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.delete-button{
+  position: relative;
+  margin-top: 30px;
+  left: 400px;
+  bottom: 280px;
+  background-color: #ffd86b;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 2px gray;
+  padding-left: 75px;
+  padding-right: 75px;
+  padding-top: 10px ;
+  padding-bottom: 10px ;
+  font-size: 25px;
+  width: 65%;
+  border-radius: 15px;
+  cursor: pointer;                    
+}
+
+.upload-button{
+  position: relative;
+  margin-top: 30px;
+  left: 527px;
+  bottom: 150px;
+  background-color: #6b75ff;
+  color: #fff;
+  text-align: center;
+  text-shadow: 1px 1px 2px gray;
+  padding-left: 65px;
+  padding-right: 65px;
+  padding-top: 10px ;
+  padding-bottom: 10px ;
+  font-size: 25px;
+  width: 65%;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.upload-box .drag-file .image {
+  width: 40px;
+}
+
+.upload-box .drag-file .message {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
