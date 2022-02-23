@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-
-import slide1 from "../asset/main/slide1.png";
-import slide3 from "../asset/main/slide3.jpg";
-
 import main1 from "../asset/main/main1.jpg";
-import main2 from "../asset/main/main2.jpg";
 import seal from "../asset/main/seal.png";
 
 import ReactFullpage from "@fullpage/react-fullpage";
@@ -33,7 +28,6 @@ export default class Main2 extends Component {
                   </div>
                 </div>
                 <div className="mainDiv4">
-                  {/* <div className="mainDiv2"> */}
                   <MainPungmul />
                   <div className="sealDiv">
                     <img

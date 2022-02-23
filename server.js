@@ -1,12 +1,12 @@
 const express = require("express");
 const app = express();
-const port = 8082; // react의 기본값은 3000이니까 3000이 아닌 아무 수
+const port = 8081; // react의 기본값은 3000이니까 3000이 아닌 아무 수
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mysql = require("mysql"); // mysql 모듈 사용
 
 var connection = mysql.createConnection({
-  host: "localhost",
+  host: "192.168.35.108",
   user: "changjin", //mysql의 id
   password: "901829", //mysql의 password
   database: "hansori", //사용할 데이터베이스

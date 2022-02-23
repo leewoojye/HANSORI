@@ -34,8 +34,7 @@ const language = "EN";
 class Test extends React.Component {
   render() {
     return (
-      <div style={{ backgroundColor: "#BFA5A4" }}>
-        <div style={{ height: "75px" }}></div>
+      <div style={{ backgroundColor: "#BFA5A4", height: "100vh" }}>
         <Calendar
           apiKey={API_KEY}
           calendars={calendars}

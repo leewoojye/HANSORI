@@ -323,6 +323,7 @@ a {
   height: 50vh;
   background-color: white;
   border-radius: 1%;
+  font-family: "NamsanB";
 }
 
 .googleLogin {
@@ -331,21 +332,21 @@ a {
 
 .loginButton {
   font-size: large;
-  color: gold;
+  color: #530004;
   font-weight: bold;
   background: none;
   padding-left: 1vw;
 }
 
 .loginButton:hover {
-  color: #ef0000;
+  color: #93656e;
   cursor: pointer;
 }
 
 .signUpButton {
   font-size: 20px;
   color: white;
-  background-color: gold;
+  background-color: #530004;
   margin-top: 2vh;
   padding: 5px;
   padding-left: 20px;
@@ -354,7 +355,7 @@ a {
 }
 
 .signUpButton:hover {
-  background-color: #ef0000;
+  background-color: #93656e;
   cursor: pointer;
 }
 
@@ -396,7 +397,7 @@ input:focus {
 }
 
 .eye {
-  color: gold;
+  color: #530004;
 }
 
 .eye:hover {

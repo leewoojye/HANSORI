@@ -9,7 +9,7 @@ const Header = ({ location, match, history }) => {
   let headerVisible = true;
   let headerReady = true;
   let isTopPage = true; // 값 구하는 방식이 정확하지 않음
-  
+
   $(window).on("mousemove", (e) => {
     if (isTopPage === false) {
       if (e.pageY < 70) {
@@ -23,14 +23,14 @@ const Header = ({ location, match, history }) => {
 
   $(document).ready(() => {
     $(".styled_header")
-    .on("mouseenter", () => {})
-    .on("mouseleave", () => {
-      if (isTopPage === false) {
-        $(".styled_header").stop().slideUp(200);
-        headerVisible = false;
-      }
-    });
-  })
+      .on("mouseenter", () => {})
+      .on("mouseleave", () => {
+        if (isTopPage === false) {
+          $(".styled_header").stop().slideUp(200);
+          headerVisible = false;
+        }
+      });
+  });
 
   $(window).on("wheel", (e) => {
     if (headerReady === true) {
@@ -40,17 +40,19 @@ const Header = ({ location, match, history }) => {
           $(".styled_header").stop().slideDown(200);
           headerVisible = true;
           isTopPage = true;
-          setTimeout(() => { headerReady = true; }, 700);
-        }
-        else headerReady = true;
+          setTimeout(() => {
+            headerReady = true;
+          }, 700);
+        } else headerReady = true;
       } else {
         if (isTopPage === true) {
           $(".styled_header").stop().slideUp(200);
           headerVisible = false;
           isTopPage = false;
-          setTimeout(() => { headerReady = true; }, 700);
-        }
-        else headerReady = true;
+          setTimeout(() => {
+            headerReady = true;
+          }, 700);
+        } else headerReady = true;
       }
     }
   });
@@ -93,8 +95,8 @@ const Header = ({ location, match, history }) => {
                 동아리
               </NavLink>
               <div className="dropdown-content">
-                <a href="#">소개</a>
-                <a href="#">연혁</a>
+                <a href="/about">소개</a>
+                <a href="/history">연혁</a>
                 <a href="#">집부</a>
               </div>
             </div>

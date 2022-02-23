@@ -14,7 +14,7 @@ class Sogo extends Component {
       query: "SELECT * FROM MEMBER;", //mysql로 전송할 쿼리 문
     };
 
-    fetch("http://localhost:8082/SQL1", {
+    fetch("http://localhost:8081/SQL1", {
       //mysql fetch 서버 주소
       method: "post", // 통신방법
       headers: { "content-type": "application/json" },
@@ -30,7 +30,7 @@ class Sogo extends Component {
 
   render() {
     return (
-      <div>
+      <div style={{ backgroundColor: "#c25e5e" }}>
         <br />
         <br />
         <br />
