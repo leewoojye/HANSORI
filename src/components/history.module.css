@@ -1,52 +1,136 @@
 .absoluteg {
   position: absolute;
-  width: 75%;
+  width: 55%;
+  height: 1.6%;
+  background: #ffffff8e;
+  background-blend-mode: multiply;
+  border: 3px solid #038000;
+  text-align: center;
+  margin-left: 0px;
+  font-size: 180%;
+  padding-inline-start: 5%;
+}
+@media screen and (max-width:800px){
+.absoluteg{
+  position: absolute;
+  width: 52%;
   height: 1.6%;
   background: #ffffffa8;
   background-blend-mode: multiply;
   border: 3px solid #038000;
-  margin-left: 0px;
+  font-size: 160%;
   text-align: left;
+  padding-inline-start: 23%;
+}  
 }
 .absolutey {
   position: absolute;
-  width: 75%;
+  width: 55%;
   height: 1.6%;
   background: #ffffff8e;
   background-blend-mode: multiply;
   border: 3px solid #ffd153;
-  text-align: left;
+  text-align: center;
+  margin-left: 0px;
+  font-size: 180%;
+  padding-inline-start: 5%;
 }
+
+@media screen and (max-width:800px){
+  .absolutey{
+    position: absolute;
+    width: 52%;
+    height: 1.6%;
+    background: #ffffff8e;
+    background-blend-mode: multiply;
+    border: 3px solid #ffd153;
+    font-size: 160%;
+    text-align: left;
+    padding-inline-start: 23%;
+  } 
+}
+
 .absoluteo {
   position: absolute;
-  width: 75%;
+  width: 55%;
   height: 1.7%;
   background: #ffffff8e;
   background-blend-mode: multiply;
   border: 3px solid #e97101;
+  text-align: center;
   margin-left: 0px;
-  text-align: left;
+  font-size: 180%;
+  padding-inline-start: 5%;
 }
+
+@media screen and (max-width:800px){
+  .absoluteo{
+    position: absolute;
+    width: 52%;
+    height: 1.6%;
+    background: #ffffff8e;
+    background-blend-mode: multiply;
+    border: 3px solid #e97101;
+    font-size: 160%;
+    text-align: left;
+    padding-inline-start: 23%;
+  } 
+}
+
 .absoluteb {
   position: absolute;
-  width: 75%;
+  width: 55%;
   height: 1.6%;
   background: #ffffff8e;
   background-blend-mode: multiply;
   border: 3px solid #597ffa;
+  text-align: center;
   margin-left: 0px;
-  text-align: left;
+  font-size: 180%;
+  padding-inline-start: 5%;
 }
+
+@media screen and (max-width:800px){
+  .absoluteb{
+    position: absolute;
+    width: 52%;
+    height: 1.6%;
+    background: #ffffff8e;
+    background-blend-mode: multiply;
+    border: 3px solid  #597ffa;
+    font-size: 160%;
+    text-align: left;
+    padding-inline-start: 23%;
+  } 
+}
+
 .absolutebp {
   position: absolute;
-  width: 75%;
+  width: 55%;
   height: 90px;
   background: #ffffff8e;
   background-blend-mode: multiply;
-  border: 3px solid #6667ab;
+  border: 3px solid #6667AB;
+  text-align: center;
   margin-left: 0px;
-  text-align: left;
+  font-size: 180%;
+  padding-inline-start: 5%;
 }
+
+@media screen and (max-width:800px){
+  .absolutebp{
+    position: absolute;
+    width: 50%;
+    height: 1.6%;
+    background: #ffffff8e;
+    background-blend-mode: multiply;
+    border: 3px solid  #6667AB;
+    font-size: 160%;
+    text-align: left;
+    padding-inline-start: 25%;
+  } 
+}
+
 .roundg {
   position: absolute;
   width: 120px;
@@ -54,8 +138,9 @@
   background: linear-gradient(to bottom, rgb(18, 117, 4), rgb(0, 0, 0));
   border: 3px solid #038000;
   margin-left: 0px;
-  border-radius: 100px;
+  border-radius:100px;
   text-align: center;
+  font-size: 30px;
 }
 
 .roundy {
@@ -65,8 +150,9 @@
   background: linear-gradient(to bottom, rgb(233, 191, 6), rgb(112, 64, 0));
   border: 3px solid #ffd153;
   margin-left: 0px;
-  border-radius: 100px;
+  border-radius:100px;
   text-align: center;
+  font-size: 30px;
 }
 
 .roundo {
@@ -76,8 +162,9 @@
   background: linear-gradient(to bottom, rgb(255, 136, 0), rgb(66, 27, 0));
   border: 3px solid #e97101;
   margin-left: 0px;
-  border-radius: 100px;
+  border-radius:100px;
   text-align: center;
+  font-size: 30px;
 }
 
 .roundb {
@@ -88,44 +175,44 @@
   border: 3px solid #597ffa;
 
   margin-left: 0px;
-  border-radius: 100px;
+  border-radius:100px;
   text-align: center;
+  font-size: 30px;
 }
+
 
 .roundbp {
   position: absolute;
-  width: 140px;
-  height: 140px;
-  background: linear-gradient(to bottom, rgb(122, 123, 202), rgb(15, 0, 15));
-  border: 3px solid #6667ab;
+  width: 120px;
+  height: 120px;
+  background: linear-gradient(to bottom, rgb(122, 123, 202), rgb(12, 0, 12));
+  border: 3px solid #6667AB;
 
   margin-left: 0px;
-  border-radius: 100px;
+  border-radius:100px;
   text-align: center;
+  font-weight: 300 ;
+  text-decoration: #6667AB;
 }
 
 .last {
   position: absolute;
   width: 85%;
   height: 150px;
-  background: linear-gradient(
-    to top,
-    rgba(255, 217, 0, 0.699),
-    rgb(20, 20, 173)
-  );
+  background: linear-gradient(to top, rgba(255, 217, 0, 0.699), rgb(20, 20, 173));
   background-blend-mode: multiply;
   border: 5px solid #ffffff;
   text-align: center;
-  border-radius: 40px;
+  border-radius:40px;
 }
 
-.button {
+.button{
   position: absolute;
   width: 50%;
   height: 80px;
-  background: rgba(255, 255, 255, 0.199);
+  background:  rgba(255, 255, 255, 0.199);
   background-blend-mode: multiply;
   border: 1px solid #ffffff;
   text-align: center;
-  border-radius: 40px;
+  border-radius:40px;
 }
