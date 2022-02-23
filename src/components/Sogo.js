@@ -11,7 +11,7 @@ class Sogo extends Component {
   requestAsset = () => {
     console.log("qwer");
     const post = {
-      query: "SELECT * FROM MEMBER;", //mysql로 전송할 쿼리 문
+      query: "SELECT * FROM USER;", //mysql로 전송할 쿼리 문
     };
 
     fetch("http://localhost:8081/SQL1", {

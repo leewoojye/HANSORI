@@ -1,5 +1,4 @@
 import ResponsiveGallery from "react-responsive-gallery";
-import styled from "styled-components";
 import { BsPlusSquare } from "react-icons/bs";
 import React, { useState } from "react";
 import Modal from "react-modal";
@@ -28,6 +27,8 @@ import pic21 from "../asset/gallery/pic21.jpg";
 import pic22 from "../asset/gallery/pic22.jpg";
 import pic23 from "../asset/gallery/pic23.jpg";
 import pic25 from "../asset/gallery/pic25.jpg";
+
+import axios from "axios";
 
 export default function Gallery() {
   const IMAGES = [
@@ -116,17 +117,40 @@ export default function Gallery() {
 
   //파일 미리볼 url을 저장해줄 state
   const [fileImage, setFileImage] = useState("");
+  const [content, setContent] = useState("");
 
   // 파일 저장
   const saveFileImage = (e) => {
     setFileImage(URL.createObjectURL(e.target.files[0]));
+    setContent(e.target.files[0]);
   };
 
   // 파일 삭제
   const deleteFileImage = () => {
     URL.revokeObjectURL(fileImage);
     setFileImage("");
+    console.log("삭제");
   };
+
+  //파일 업로드 --> 이미지 업로드시 ./public/img 폴더에 이미지 저장됨
+  const uploadImage = (e) => {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append("img", content);
+    axios
+      .post("http://localhost:8081/upload", formData)
+      .then((res) => {
+        const { fileName } = res.data;
+        console.log(fileName);
+        alert("The file is successfully uploaded");
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+  };
+
+  console.log(fileImage);
+  console.log(content);
 
   return (
     <div className="gallery_background">
@@ -169,28 +193,29 @@ export default function Gallery() {
                   justifyContent: "center",
                 }}
               >
-                <label class="file-label" for="chooseFile">
-                  사진 선택
-                </label>
-                <input
+                <form onSubmit={uploadImage}>
+                  <label class="file-label" for="chooseFile">
+                    사진 선택
+                  </label>
+                  <input
+                    id="chooseFile"
+                    name="imgUpload"
+                    type="file"
+                    accept="image/*"
+                    onChange={saveFileImage}
+                  />
+
+                  <button class="upload-button" type="submit">
+                    업로드
+                  </button>
+                  {/* <input
                   id="chooseFile"
                   name="imgUpload"
                   type="file"
                   accept="image/*"
                   onChange={saveFileImage}
-                />
-
-                <label class="upload-button" for="submit">
-                  업로드
-                </label>
-                <input
-                  id="chooseFile"
-                  name="imgUpload"
-                  type="file"
-                  accept="image/*"
-                  onChange={saveFileImage}
-                />
-
+                /> */}
+                </form>
                 <label class="delete-button" onClick={() => deleteFileImage()}>
                   삭제
                 </label>
@@ -204,16 +229,6 @@ export default function Gallery() {
         </button>
       </Modal>
 
-      {/* {modalVisible && (
-        <UploadImage
-          visible={modalVisible}
-          closable={true}
-          maskClosable={true}
-          onClose={closeModal}
-        >
-          이미지 업로드 페이지
-        </UploadImage>
-      )} */}
       <ResponsiveGallery
         useLightBox
         images={IMAGES}

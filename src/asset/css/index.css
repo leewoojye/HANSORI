@@ -157,7 +157,7 @@ a {
 
 .plus:hover {
   cursor: pointer;
-  font-size: 33px;
+  color: #93656e;
   transition: all 0.1s;
 }
 

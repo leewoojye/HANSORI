@@ -36,12 +36,12 @@ class Profile extends Component {
   responseGoogleSignIn = (res) => {
     const post = {
       query:
-        "SELECT EXISTS (SELECT * FROM MEMBER WHERE Email='" +
+        "SELECT EXISTS (SELECT * FROM USER WHERE Email='" +
         res.profileObj.email +
         "' LIMIT 1) AS SUCCESS;", //mysql로 전송할 쿼리 문
     };
 
-    fetch("http://localhost:8082/SQL1", {
+    fetch("http://localhost:8081/SQL1", {
       //mysql fetch 서버 주소
       method: "post", // 통신방법
       headers: { "content-type": "application/json" },
@@ -71,12 +71,12 @@ class Profile extends Component {
   responseGoogleSignUp = (res) => {
     const post = {
       query:
-        "SELECT EXISTS (SELECT * FROM MEMBER WHERE Email='" +
+        "SELECT EXISTS (SELECT * FROM USER WHERE Email='" +
         res.profileObj.email +
         "' LIMIT 1) AS SUCCESS;", //mysql로 전송할 쿼리 문
     };
 
-    fetch("http://localhost:8082/SQL1", {
+    fetch("http://localhost:8081/SQL1", {
       //mysql fetch 서버 주소
       method: "post", // 통신방법
       headers: { "content-type": "application/json" },
@@ -288,13 +288,13 @@ class Profile extends Component {
                     if (this.state.pbpwInput == pbpw) {
                       const post = {
                         query:
-                          "INSERT INTO MEMBER VALUES ('" +
+                          "INSERT INTO USER VALUES ('" +
                           this.state.email +
                           "'," +
                           0 +
                           ");",
                       };
-                      fetch("http://localhost:8082/SQL1", {
+                      fetch("http://localhost:8081/SQL1", {
                         method: "post",
                         headers: { "content-type": "application/json" },
                         body: JSON.stringify(post),
