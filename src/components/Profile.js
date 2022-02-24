@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
-import memberList from "./memberList.json";
 
 const pbpw = "901829"; //////////////
 
@@ -20,17 +19,6 @@ class Profile extends Component {
       pbpwInput: "",
     };
   }
-
-  // isMember = (email) => {
-  //   // let check = false;
-  //   // memberList.map((member) => {
-  //   //   if (email == member.email) check = true;
-  //   // });
-  //   // return check;
-
-  //   console.log("ismember");
-
-  // };
 
   // Google SignIn
   responseGoogleSignIn = (res) => {

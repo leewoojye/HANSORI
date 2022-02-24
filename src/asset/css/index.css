@@ -289,10 +289,10 @@ a {
 }
 .arrow span {
   display: block;
-  width: 10px;
-  height: 10px;
-  border-bottom: 2px solid #bfa5a4;
-  border-right: 2px solid #bfa5a4;
+  width: 12px;
+  height: 12px;
+  border-bottom: 3px solid #bfa5a4;
+  border-right: 3px solid #bfa5a4;
   transform: rotate(45deg);
   margin: -5px;
   animation: animate 2s infinite;
@@ -588,4 +588,40 @@ input:focus {
 .seal:hover {
   cursor: pointer;
   filter: brightness(80%);
+}
+
+.uploadDiv {
+  padding-top: 10vh;
+  width: 40vw;
+  height: 50vh;
+  background-color: white;
+  border-radius: 1%;
+  font-family: "NamsanB";
+
+  color: black;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+}
+
+.write_title {
+  font-family: "NamsanM";
+  width: 80%;
+  font-size: 20px;
+  margin: 10px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid black;
+}
+
+.write_content {
+  font-family: "NamsanM";
+  resize: none;
+  width: 80%;
+  height: 45%;
+  font-size: 20px;
+}
+
+textarea:focus {
+  outline: none;
 }

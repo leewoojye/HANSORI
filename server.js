@@ -9,7 +9,7 @@ const path = require("path");
 const multer = require("multer");
 
 var connection = mysql.createConnection({
-  host: "192.168.70.1",
+  host: "172.30.1.37",
   user: "changjin", //mysql의 id
   password: "901829", //mysql의 password
   database: "hansori", //사용할 데이터베이스

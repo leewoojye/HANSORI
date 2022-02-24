@@ -19,6 +19,8 @@ import Sogo from "./components/Sogo";
 import history from "./components/history";
 import popup from "./components/popup";
 import Main2 from "./components/Main2";
+import UploadNotice from "./components/UploadNotice";
+import UploadBoard from "./components/UploadBoard";
 
 function App() {
   return (
@@ -32,7 +34,7 @@ function App() {
       <Route path="/jokbo" component={Jokbo} />
       <Route path="/profile" component={Profile} />
       <Route path="/test" component={Test} />
-      <Route path="/board" component={Board} />
+      <Route path="/board" exact={true} component={Board} />
       <Route path="/pungmul" exact={true} component={Pungmul} />
       <Route path="/pungmul/kkwaenggwari" component={Kkwaenggwari} />
       <Route path="/pungmul/janggu" component={Janggu} />
@@ -41,6 +43,8 @@ function App() {
       <Route path="/pungmul/sogo" component={Sogo} />
       <Route path="/popup" component={popup} />
       <Route path="/history" component={history} />
+      <Route path="/board/notice/upload" component={UploadNotice} />
+      <Route path="/board/upload" component={UploadBoard} />
       <Footer />
     </>
   );
