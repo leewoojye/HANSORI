@@ -80,7 +80,7 @@ export default function history() {
 
           width: `${window.innerHeight > window.innerWidth ? "100vw" : "100vw"}`,
         }}
-        strength={5500}
+        strength={3700}
           style={{ height: "5300px", position: "relative", overflow: "hidden" }}
         renderLayer={(percentage) => (
           <div style={{
@@ -766,7 +766,7 @@ export default function history() {
             <button onClick={() => window.open('popup', '팝업','width=600, height=500,location=center,scrollbars=no')}>
              {/*마무리 끝맺음말*/}
              <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-             <div className="headerleftu">
+             <div className="popcli">
              <div style={{ color: "yellow" }}>
              <div className="wrap">
                 <div className="lastsay"><div className={styles.last}>
@@ -797,4 +797,3 @@ export default function history() {
  
     )}
    
-
