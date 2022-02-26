@@ -289,8 +289,8 @@ a {
 }
 .arrow span {
   display: block;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-bottom: 3px solid #bfa5a4;
   border-right: 3px solid #bfa5a4;
   transform: rotate(45deg);
@@ -322,7 +322,7 @@ a {
   width: 40vw;
   height: 50vh;
   background-color: white;
-  border-radius: 1%;
+  border-radius: 10px;
   font-family: "NamsanB";
 }
 
@@ -534,34 +534,34 @@ input:focus {
   font-size: 50px;
   width: 45vw;
 }
-
+/* 
 .mainDiv2 {
   font-size: 40px;
   margin-left: 1vw;
   width: 34vw;
   border-radius: 0 20px 20px 0;
   background-color: #f3eed9;
-}
+} */
 
 .mainDiv3 {
   text-align: right;
   padding: 10px;
   color: #f3eed9;
-  border-radius: 0 0 0 20px;
+  border-radius: 0 0 0 10px;
   background-color: #728434;
 }
 
 .mainDiv4 {
   margin-left: 1vw;
   width: 34vw;
-  border-radius: 0 20px 20px 0;
-  background-color: #f7d759;
+  border-radius: 0 10px 10px 0;
+  background-color: #eec26f;
 }
 
 .mainImg1 {
   width: 45vw;
   height: auto;
-  border-radius: 20px 0 0 0;
+  border-radius: 10px 0 0 0;
   transition-duration: 0.2s;
 }
 
@@ -579,7 +579,7 @@ input:focus {
 .seal {
   position: absolute;
   right: 10px;
-  bottom: 10px;
+  bottom: 30px;
 
   width: 25px;
   height: 25px;
@@ -624,4 +624,52 @@ input:focus {
 
 textarea:focus {
   outline: none;
+}
+
+.leftPungmul {
+  margin-left: 10vw;
+  width: 10vw;
+  height: 80vh;
+  border-radius: 10px 0 0 10px;
+  background-color: #ba8900;
+}
+
+.rightPungmul {
+  width: 70vw;
+  height: 80vh;
+  border-radius: 0 10px 10px 0;
+  background-color: white;
+}
+
+.instImg {
+  width: 24vw;
+}
+
+.note {
+  padding: 10vh;
+  padding-left: 18.56vw;
+  display: flex;
+}
+
+.noteCell {
+  font-size: 20px;
+  font-family: "NamsanEB";
+  line-height: 2.5vw;
+  text-align: center;
+  width: 2.5vw;
+  height: 2.5vw;
+  border: 0.12vw solid black;
+}
+
+.help {
+  position: absolute;
+  right: 11vw;
+  bottom: 10vh;
+  font-size: 70px;
+  color: #ba8900;
+}
+
+.help:hover {
+  cursor: pointer;
+  color: #eec26f;
 }

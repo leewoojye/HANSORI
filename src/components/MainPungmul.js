@@ -23,13 +23,13 @@ const Test = styled.button`
   height: 75px;
 `;
 
-function MainPungmul() {
+function MainPungmul({ scale }) {
   return (
     <>
       <div
         className="contents"
         style={{
-          backgroundColor: "#eec26f",
+          backgroundColor: "transparent",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -43,7 +43,7 @@ function MainPungmul() {
                 className="inst"
                 src={inst1}
                 alt=""
-                style={{ width: "37px", paddingBottom: "10px" }}
+                style={{ width: `${37 * scale}px`, paddingBottom: "10px" }}
                 onClick={() => {
                   setTimeout(500);
                 }}
@@ -57,7 +57,7 @@ function MainPungmul() {
                 className="inst"
                 src={inst2}
                 alt=""
-                style={{ width: "90px", paddingBottom: "10px" }}
+                style={{ width: `${90 * scale}px`, paddingBottom: "10px" }}
               />
             </DelayLink>
             {/* <div className="mainText">장구</div> */}
@@ -68,7 +68,7 @@ function MainPungmul() {
                 className="inst"
                 src={inst3}
                 alt=""
-                style={{ width: "69px", paddingBottom: "10px" }}
+                style={{ width: `${69 * scale}px`, paddingBottom: "10px" }}
               />
             </DelayLink>
             {/* <div className="mainText">북</div> */}
@@ -79,7 +79,7 @@ function MainPungmul() {
                 className="inst"
                 src={inst4}
                 alt=""
-                style={{ width: "77px", paddingBottom: "10px" }}
+                style={{ width: `${77 * scale}px`, paddingBottom: "10px" }}
               />
             </DelayLink>
             {/* <div className="mainText">징</div> */}
@@ -90,7 +90,7 @@ function MainPungmul() {
                 className="inst"
                 src={inst5}
                 alt=""
-                style={{ width: "51px", paddingBottom: "10px" }}
+                style={{ width: `${51 * scale}px`, paddingBottom: "10px" }}
               />
             </DelayLink>
             {/* <div className="mainText">소고</div> */}
@@ -101,7 +101,7 @@ function MainPungmul() {
               backgroundColor="red"
               src={instEnd}
               alt=""
-              style={{ width: "3px", paddingBottom: "10px" }}
+              style={{ width: `${3 * scale}px`, paddingBottom: "10px" }}
             />
           </NavLink>
         </div>
@@ -109,5 +109,9 @@ function MainPungmul() {
     </>
   );
 }
+
+MainPungmul.defaultProps = {
+  scale: 1,
+};
 
 export default MainPungmul;
