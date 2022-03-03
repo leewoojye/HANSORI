@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const port = 8082; // react의 기본값은 3000이니까 3000이 아닌 아무 수
+const port = 8080; // react의 기본값은 3000이니까 3000이 아닌 아무 수
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mysql = require("mysql"); // mysql 모듈 사용
@@ -68,5 +68,5 @@ app.post("/upload", upload.single("img"), function (req, res, next) {
 });
 
 app.listen(port, () => {
-  console.log(`Connect at http://hansori.net:${port}`);
+  console.log(`Connect at http://15.165.68.170:${port}`);
 });

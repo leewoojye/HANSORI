@@ -14,7 +14,7 @@ class Sogo extends Component {
       query: "SELECT * FROM USER;", //mysql로 전송할 쿼리 문
     };
 
-    fetch("http://15.165.68.170:8082/SQL1", {
+    fetch("http://localhost:8080/SQL1", {
       //mysql fetch 서버 주소
       method: "post", // 통신방법
       headers: { "content-type": "application/json" },
