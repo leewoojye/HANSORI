@@ -28,6 +28,7 @@
     "react-scripts": "4.0.3",
     "react-slick": "^0.28.1",
     "styled-components": "^5.3.3",
+    "url-parse": "^1.5.10",
     "web-vitals": "^1.0.1"
   },
   "scripts": {
