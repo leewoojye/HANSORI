@@ -113,7 +113,8 @@ class Profile extends Component {
         className="contents"
         style={{
           height: "100vh",
-          backgroundColor: "#c25e5e",
+          backgroundColor: "#FAF0E6",
+          // backgroundColor: "#B1B6A0",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -131,7 +132,7 @@ class Profile extends Component {
           ) : !this.state.signUp ? (
             <div
               style={{
-                color: "black",
+                color: "white",
                 alignItems: "center",
                 justifyContent: "center",
                 fontSize: "30px",
@@ -177,7 +178,7 @@ class Profile extends Component {
           !this.state.signUping ? (
             <div
               style={{
-                color: "black",
+                color: "white",
                 alignItems: "center",
                 justifyContent: "center",
                 fontSize: "30px",

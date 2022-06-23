@@ -7,7 +7,7 @@ function Board() {
       className="contents"
       style={{
         height: "100vh",
-        backgroundColor: "#BFA5A4",
+        backgroundColor: "#C1B8AF",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",

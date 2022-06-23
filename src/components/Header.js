@@ -1,6 +1,8 @@
 import React, { useEffect } from "react";
 import logo_white from "../asset/header/logo_white.png";
+import logo from "../asset/header/logo.png";
 import profile_white from "../asset/header/profile_white.png";
+import profile from "../asset/header/profile.png";
 import { NavLink, withRouter } from "react-router-dom";
 import "../asset/css/Header.css";
 import $ from "jquery";
@@ -80,7 +82,7 @@ const Header = ({ location, match, history }) => {
               }}
             >
               <img
-                src={logo_white}
+                src={logo}
                 height="35"
                 alt=""
                 onClick={() => {
@@ -130,7 +132,7 @@ const Header = ({ location, match, history }) => {
                 {window.localStorage.getItem("isLogin") == null ? (
                   <img
                     style={{ borderRadius: "70%" }}
-                    src={profile_white}
+                    src={profile}
                     height="35"
                     alt=""
                   />

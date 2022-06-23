@@ -13,7 +13,7 @@ export default class Main2 extends Component {
         scrollOverflow={true}
         render={({ state, fullpageApi }) => (
           <div id="fullpage-wrapper">
-            <div className="section " style={{ backgroundColor: "#c25e5e" }}>
+            <div className="section " style={{ backgroundColor: "#FAF0E6" }}>
               <div className="section1 ">
                 <div className="mainDiv1 ">
                   <img

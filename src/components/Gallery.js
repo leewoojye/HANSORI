@@ -155,9 +155,9 @@ export default function Gallery() {
   return (
     <div className="gallery_background">
       {/* <div className="gallery_header" /> */}
-      <button onClick={openModal}>
+      {/* <button onClick={openModal}>
         <BsPlusSquare className="plus" />
-      </button>
+      </button> */}
       <Modal
         className="modal"
         isOpen={modalIsOpen}

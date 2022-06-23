@@ -21,6 +21,7 @@ import popup from "./components/popup";
 import Main2 from "./components/Main2";
 import UploadNotice from "./components/UploadNotice";
 import UploadBoard from "./components/UploadBoard";
+import PhotoTest from "./components/PhotoTest";
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
       <Route path="/history" component={history} />
       <Route path="/board/notice/upload" component={UploadNotice} />
       <Route path="/board/upload" component={UploadBoard} />
+      <Route path="/phototest" component={PhotoTest} />
       <Footer />
     </>
   );
