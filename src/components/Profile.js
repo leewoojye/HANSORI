@@ -113,8 +113,8 @@ class Profile extends Component {
         className="contents"
         style={{
           height: "100vh",
-          backgroundColor: "#FAF0E6",
-          // backgroundColor: "#B1B6A0",
+          backgroundColor: "white",
+          // backgroundColor: "#FAF0E6",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",

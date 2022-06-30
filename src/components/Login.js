@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { GoogleLogin } from "react-google-login";
 import styled from "styled-components";
 import profile_white from "../asset/header/profile_white.png";
+import profile from "../asset/header/profile.png";
 
 class Login extends Component {
   constructor(props) {
@@ -41,7 +42,7 @@ class Login extends Component {
         <br />
         <div style={{ color: "white" }}>
           {this.state.imageUrl === "ddd" ? (
-            <img src={profile_white} height="35" alt="" />
+            <img src={profile} height="35" alt="" />
           ) : (
             <img
               src={process.env.PUBLIC_URL + this.state.imageUrl}

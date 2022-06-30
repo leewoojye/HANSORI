@@ -1,17 +1,26 @@
+var history = require("connect-history-api-fallback");
+
 const express = require("express");
 const app = express();
-const port = 8080; // react의 기본값은 3000이니까 3000이 아닌 아무 수
+
+app.use(history());
+
+const port = 8081; // react의 기본값은 3000이니까 3000이 아닌 아무 수
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const mysql = require("mysql"); // mysql 모듈 사용
 
 const path = require("path");
+
 const multer = require("multer");
 
 var connection = mysql.createConnection({
-  host: "15.165.68.170",
-  user: "hansori", //mysql의 id
-  password: "Hansori@901829", //mysql의 password
+  host: "localhost",
+  user: "root", //mysql의 id
+  password: "0000", //mysql의 password
+  // host: "15.165.68.170",
+  // user: "hansori", //mysql의 id
+  // password: "Hansori@901829", //mysql의 password
   database: "hansori", //사용할 데이터베이스
 });
 
