@@ -30,7 +30,8 @@ function Pungmul() {
         className="contents"
         style={{
           height: "100vh",
-          backgroundColor: "#D8D2C1",
+          backgroundColor: "white",
+          // backgroundColor: "#D8D2C1",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -44,7 +45,7 @@ function Pungmul() {
                 className="inst"
                 src={inst1}
                 alt=""
-                style={{ width: "46px" }}
+                style={{ width: "46px", filter: "invert(100%)" }}
                 onClick={() => {
                   setTimeout(500);
                 }}
@@ -58,7 +59,7 @@ function Pungmul() {
                 className="inst"
                 src={inst2}
                 alt=""
-                style={{ width: "112px" }}
+                style={{ width: "112px", filter: "invert(100%)" }}
               />
             </DelayLink>
             <div className="text">장구</div>
@@ -69,7 +70,7 @@ function Pungmul() {
                 className="inst"
                 src={inst3}
                 alt=""
-                style={{ width: "86px" }}
+                style={{ width: "86px", filter: "invert(100%)" }}
               />
             </DelayLink>
             <div className="text">북</div>
@@ -80,7 +81,7 @@ function Pungmul() {
                 className="inst"
                 src={inst4}
                 alt=""
-                style={{ width: "96px" }}
+                style={{ width: "96px", filter: "invert(100%)" }}
               />
             </DelayLink>
             <div className="text">징</div>
@@ -91,7 +92,7 @@ function Pungmul() {
                 className="inst"
                 src={inst5}
                 alt=""
-                style={{ width: "64px" }}
+                style={{ width: "64px", filter: "invert(100%)" }}
               />
             </DelayLink>
             <div className="text">소고</div>
@@ -102,7 +103,7 @@ function Pungmul() {
               backgroundColor="red"
               src={instEnd}
               alt=""
-              style={{ width: "5px" }}
+              style={{ width: "5px", filter: "invert(100%)" }}
               onClick={() => {
                 window.localStorage.setItem("changeColor", true);
               }}

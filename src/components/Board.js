@@ -1,14 +1,17 @@
 import React from "react";
 import instrument from "../asset/pungmul/instrument.png";
+import { useState } from "react";
 
 function Board() {
+  const [email, setEmail] = useState("asdf");
+
   function handleLogin() {
     const post = {
       query: "SELECT * FROM USER;",
     };
     console.log(post.query);
 
-    fetch("http://localhost:8081/SQL2", {
+    fetch("http://192.168.35.108:8081/SQL1", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(post),
@@ -16,6 +19,7 @@ function Board() {
       .then((res) => res.json())
       .then((json) => {
         console.log(json);
+        setEmail(json.Email);
       });
   }
 
@@ -37,6 +41,7 @@ function Board() {
         </div>
         <button onClick={handleLogin}>test</button>
       </div>
+      <div>{email}</div>
     </div>
   );
 }

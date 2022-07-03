@@ -3,8 +3,6 @@ import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
 
-const pbpw = "901829"; //////////////
-
 class Profile extends Component {
   constructor(props) {
     super(props);
@@ -29,7 +27,7 @@ class Profile extends Component {
         "' LIMIT 1) AS SUCCESS;", //mysql로 전송할 쿼리 문
     };
 
-    fetch("http://localhost:8081/SQL1", {
+    fetch("http://192.168.35.108:8081/SQL1", {
       //mysql fetch 서버 주소
       method: "post", // 통신방법
       headers: { "content-type": "application/json" },
@@ -64,7 +62,7 @@ class Profile extends Component {
         "' LIMIT 1) AS SUCCESS;", //mysql로 전송할 쿼리 문
     };
 
-    fetch("http://localhost:8081/SQL1", {
+    fetch("http://192.168.35.108:8081/SQL1", {
       //mysql fetch 서버 주소
       method: "post", // 통신방법
       headers: { "content-type": "application/json" },
@@ -274,26 +272,40 @@ class Profile extends Component {
                 <button
                   className="signUpButton"
                   onClick={() => {
-                    if (this.state.pbpwInput == pbpw) {
-                      const post = {
-                        query:
-                          "INSERT INTO USER VALUES ('" +
-                          this.state.email +
-                          "'," +
-                          0 +
-                          ");",
-                      };
-                      fetch("http://localhost:8081/SQL1", {
-                        method: "post",
-                        headers: { "content-type": "application/json" },
-                        body: JSON.stringify(post),
+                    const post = {
+                      query: "SELECT * FROM PBPW;",
+                    };
+                    console.log(post.query);
+
+                    fetch("http://192.168.35.108:8081/SQL1", {
+                      method: "post",
+                      headers: { "content-type": "application/json" },
+                      body: JSON.stringify(post),
+                    })
+                      .then((res) => res.json())
+                      .then((json) => {
+                        console.log(json);
+                        if (this.state.pbpwInput == json.Pw) {
+                          const post = {
+                            query:
+                              "INSERT INTO USER VALUES ('" +
+                              this.state.email +
+                              "'," +
+                              0 +
+                              ");",
+                          };
+                          fetch("http://localhost:8081/SQL1", {
+                            method: "post",
+                            headers: { "content-type": "application/json" },
+                            body: JSON.stringify(post),
+                          });
+                          alert("회원가입이 완료되었습니다.");
+                          window.localStorage.clear();
+                          window.location.reload();
+                        } else {
+                          alert("비밀번호를 다시 확인해주세요.");
+                        }
                       });
-                      alert("회원가입이 완료되었습니다.");
-                      window.localStorage.clear();
-                      window.location.reload();
-                    } else {
-                      alert("비밀번호를 다시 확인해주세요.");
-                    }
                   }}
                 >
                   계정 생성

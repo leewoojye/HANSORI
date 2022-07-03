@@ -1,13 +1,16 @@
 import React from "react";
 import { Parallax, Background } from "react-parallax";
-import about1 from "../asset/about/about1.jpg";
-import about2 from "../asset/about/about2.jpg";
-import about3 from "../asset/about/about3.jpg";
-import about4 from "../asset/about/about4.png";
+import about1 from "../asset/about/h1.png";
+// import about1 from "../asset/about/about1.jpg";
+import about2 from "../asset/about/h2.png";
+import about3 from "../asset/about/h3.png";
+import about4 from "../asset/about/h4.png";
+import about5 from "../asset/about/h5.png";
 import dots from "../asset/about/ryb3.png";
 
 const insideStyles = {
-  border: "2px solid #ef0000",
+  border: "2px solid white",
+  borderRadius: "10px",
   padding: 20,
   position: "absolute",
   top: "50%",
@@ -19,7 +22,7 @@ export default function About() {
   return (
     <div
       style={{
-        backgroundColor: "black",
+        backgroundColor: "white",
         textAlign: "center",
       }}
     >
@@ -167,7 +170,7 @@ export default function About() {
       <img className="dots" src={dots} />
 
       <Parallax
-        bgImage={about1}
+        bgImage={about5}
         bgImageStyle={{
           height: `${
             window.innerHeight > window.innerWidth ? "100vh" : "auto"
@@ -181,13 +184,13 @@ export default function About() {
             <div
               style={{
                 position: "absolute",
-                background: `rgba(255, 255, 255, ${percentage * 0.7})`,
+                background: `rgba(233, 209, 184, ${percentage})`,
                 left: "50%",
                 top: "50%",
                 borderRadius: "50%",
                 transform: "translate(-50%,-50%)",
-                width: percentage * 450,
-                height: percentage * 450,
+                width: percentage * 400,
+                height: percentage * 400,
               }}
             />
           </div>
@@ -199,19 +202,18 @@ export default function About() {
             position: "relative",
             fontSize: "20px",
             overflow: "hidden",
+            fontWeight: "bold",
           }}
         >
           <div style={insideStyles}>
-            <b>지원 방법</b>
+            지원 방법
             <br />
             <br />
-            패장 이창진 01093653545
-            <br />
-            상쇠 박지은 01041007994
+            풍방으로 오세요~
           </div>
         </div>
       </Parallax>
-      <img className="dots" src={dots} />
+      {/* <img className="dots" src={dots} /> */}
     </div>
   );
 }

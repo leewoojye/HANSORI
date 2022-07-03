@@ -1,9 +1,5 @@
-var history = require("connect-history-api-fallback");
-
 const express = require("express");
 const app = express();
-
-app.use(history());
 
 const port = 8081; // react의 기본값은 3000이니까 3000이 아닌 아무 수
 const cors = require("cors");
@@ -15,9 +11,9 @@ const path = require("path");
 const multer = require("multer");
 
 var connection = mysql.createConnection({
-  host: "localhost",
-  user: "root", //mysql의 id
-  password: "0000", //mysql의 password
+  host: "125.6.40.93",
+  user: "hansori", //mysql의 id
+  password: "Hansori@901829", //mysql의 password
   // host: "15.165.68.170",
   // user: "hansori", //mysql의 id
   // password: "Hansori@901829", //mysql의 password
@@ -29,6 +25,10 @@ connection.connect();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("hello world!");
+});
 
 app.post("/SQL1", (req, res) => {
   const post = req.body.query;
@@ -77,5 +77,5 @@ app.post("/upload", upload.single("img"), function (req, res, next) {
 });
 
 app.listen(port, () => {
-  console.log(`Connect at http://15.165.68.170:${port}`);
+  console.log(`Connect at http://asdf:${port}`);
 });
