@@ -329,7 +329,7 @@ a {
   padding-top: 10vh;
   width: 40vw;
   height: 50vh;
-  background-color: #b1b6a0;
+  background-color: #d8d2c1;
   border-radius: 10px;
   font-family: "NamsanB";
 }
@@ -543,6 +543,9 @@ input:focus {
 .mainDiv1 {
   font-size: 45px;
   width: 45vw;
+  display: grid;
+  background-color: #b1b6a0;
+  border-radius: 10px 0 0 10px;
 }
 /* 
 .mainDiv2 {
@@ -559,6 +562,7 @@ input:focus {
   color: white;
   border-radius: 0 0 0 10px;
   background-color: #b1b6a0;
+  margin-top: 1vw;
 }
 
 .mainDiv4 {
@@ -570,9 +574,10 @@ input:focus {
 
 .mainImg1 {
   width: 45vw;
-  height: auto;
   border-radius: 10px 0 0 0;
   transition-duration: 0.2s;
+  padding-bottom: 1vw;
+  background-color: white;
 }
 
 .mainImg1:hover {
