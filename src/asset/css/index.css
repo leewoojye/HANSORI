@@ -69,8 +69,8 @@ a {
   padding-top: 75px;
   padding-bottom: 75px;
   background-color: white;
-  padding-left: 50px;
-  padding-right: 50px;
+  padding-left: 3vw;
+  padding-right: 3vw;
 }
 
 .gallery {
@@ -116,6 +116,44 @@ a {
   filter: brightness(90%);
 }
 /*------------------------------*/ /* About.js */
+
+/* AboutM.js */ /*------------------------------*/
+.aboutM_title {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 15vw;
+  color: black;
+}
+.aboutM_title2 {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 10vw;
+  color: black;
+}
+.aboutM_contents {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-top: 20px;
+  font-size: 5vw;
+  text-align: center;
+  color: white;
+}
+
+.dotsM {
+  height: 7px;
+  padding: 7px 0;
+  filter: brightness(90%);
+}
+/*------------------------------*/ /* AboutM.js */
 
 .contents {
   width: 100%;
@@ -222,6 +260,30 @@ a {
   top: 0;
   left: 0;
   z-index: 200;
+}
+
+.styled_headerM {
+  width: 100%;
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+.menuM {
+  position: fixed;
+  top: 0;
+  padding-top: 100px;
+  background-color: white;
+  height: 80vh;
+  width: 100vw;
+  z-index: 100;
+  text-align: center;
+  font-size: 25px;
+  font-family: "NamsanB";
 }
 
 .styled_logo {
@@ -507,13 +569,13 @@ input:focus {
   font-style: normal;
 }
 
+/* Main.js */ /*------------------------------*/
 .section1 {
   font-family: "NamsanB";
   display: flex;
   padding: 10vh 10vw 10vh 10vw;
 }
 
-/* Main.js */ /*------------------------------*/
 .mainDiv1 {
   font-size: 45px;
   width: 45vw;

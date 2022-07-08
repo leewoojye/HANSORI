@@ -1,5 +1,6 @@
 import "./App.css";
 import Header from "./components/Header";
+import HeaderM from "./components/HeaderM";
 import { Route } from "react-router-dom";
 import Footer from "./components/Footer";
 import About from "./components/About";
@@ -17,14 +18,28 @@ import Sogo from "./components/Sogo";
 import history from "./components/history";
 import popup from "./components/popup";
 import Main from "./components/Main";
+import MainM from "./components/MainM";
 import UploadNotice from "./components/UploadNotice";
 import UploadBoard from "./components/UploadBoard";
 
+import MediaQuery from "react-responsive";
+import { useMediaQuery } from "react-responsive";
+import AboutM from "./components/AboutM";
+
 function App() {
+  const isMobile = useMediaQuery({
+    query: "(max-width: 767px)",
+  });
+
   return (
     <>
-      <Header />
-      <Route path="/" exact={true} component={Main} />
+      {isMobile ? <HeaderM /> : <Header />}
+      {isMobile ? (
+        <Route path="/" exact={true} component={MainM} />
+      ) : (
+        <Route path="/" exact={true} component={Main} />
+      )}
+
       <Route path="/about" component={About} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/pungsa" component={Pungsa} />
@@ -41,6 +56,7 @@ function App() {
       <Route path="/history" component={history} />
       <Route path="/board/notice/upload" component={UploadNotice} />
       <Route path="/board/upload" component={UploadBoard} />
+      <Route path="/aboutM" component={AboutM} />
       <Footer />
     </>
   );
