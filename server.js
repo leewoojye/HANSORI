@@ -58,24 +58,6 @@ app.post("/SQL2", (req, res) => {
   });
 });
 
-app.use(express.static("public"));
-const storage = multer.diskStorage({
-  destination: "./public/img/",
-  filename: function (req, file, cb) {
-    cb(null, "imgfile" + Date.now() + path.extname(file.originalname));
-  },
-});
-const upload = multer({
-  storage: storage,
-  limits: { fileSize: 100000000 },
-});
-app.post("/upload", upload.single("img"), function (req, res, next) {
-  console.log("asdfasdfasdfad");
-  res.send({
-    fileName: req.file.filename,
-  });
-});
-
 app.listen(port, () => {
   console.log(`Connect at http://asdf:${port}`);
 });

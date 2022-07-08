@@ -64,11 +64,11 @@ a {
   line-height: 20px;
 }
 
+/* Gallery.js */ /*------------------------------*/
 .gallery_background {
   padding-top: 75px;
   padding-bottom: 75px;
   background-color: white;
-  /* background-color: #faf0e6; */
   padding-left: 50px;
   padding-right: 50px;
 }
@@ -76,6 +76,7 @@ a {
 .gallery {
   color: red;
 }
+/*------------------------------*/ /* Gallery.js */
 
 .wrap1 {
   width: 1600px;
@@ -87,34 +88,46 @@ a {
   width: 100%;
 }
 
-.dots {
-  height: 10px;
-  padding: 10px 0;
-  filter: brightness(90%);
-}
-
-.intro_title {
+/* About.js */ /*------------------------------*/
+.about_title {
   width: 100%;
   height: 100%;
-  /* background-color: rgba(0, 0, 0, 0.3); */
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
   font-size: 8vw;
   color: black;
-  /* color: white; */
 }
 
-.intro_contents {
-  padding-top: 30px;
-  font-size: 1vw;
+.about_contents {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-top: 20px;
+  font-size: 30px;
   text-align: center;
   color: white;
 }
 
+.dots {
+  height: 10px;
+  padding: 10px 0;
+  filter: brightness(90%);
+}
+/*------------------------------*/ /* About.js */
+
 .contents {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0);
+  padding-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
+.profile_contents {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.3);
@@ -283,48 +296,7 @@ a {
   filter: brightness(80%);
 }
 
-.arrow {
-  position: absolute;
-  top: 95%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.arrow:hover {
-  cursor: pointer;
-}
-.arrow span {
-  display: block;
-  width: 10px;
-  height: 10px;
-  /* border-bottom: 3px solid #bfa5a4; */
-  border-bottom: 2.5px solid black;
-  /* border-right: 3px solid #bfa5a4; */
-  border-right: 2.5px solid black;
-  border-radius: 20%;
-  transform: rotate(45deg);
-  margin: -5px;
-  animation: animate 2s infinite;
-}
-.arrow span:nth-child(2) {
-  animation-delay: -0.2s;
-}
-.arrow span:nth-child(3) {
-  animation-delay: -0.4s;
-}
-@keyframes animate {
-  0% {
-    opacity: 0;
-    transform: rotate(45deg) translate(-5px, -5px);
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-    transform: rotate(45deg) translate(5px, 5px);
-  }
-}
-
+/* Profile.js */ /*------------------------------*/
 .profile {
   padding-top: 10vh;
   width: 40vw;
@@ -340,14 +312,14 @@ a {
 
 .loginButton {
   font-size: large;
-  color: #005b4a;
+  color: black;
   font-weight: bold;
   background: none;
   padding-left: 1vw;
 }
 
 .loginButton:hover {
-  color: #5d826f;
+  color: rgba(1, 1, 1, 0.7);
   cursor: pointer;
 }
 
@@ -418,6 +390,7 @@ input:focus {
   margin: 5vh;
   height: 10vh;
 }
+/*------------------------------*/ /* Profile.js */
 
 .container {
   width: 100px;
@@ -540,6 +513,7 @@ input:focus {
   padding: 10vh 10vw 10vh 10vw;
 }
 
+/* Main.js */ /*------------------------------*/
 .mainDiv1 {
   font-size: 45px;
   width: 45vw;
@@ -547,43 +521,75 @@ input:focus {
   background-color: #b1b6a0;
   border-radius: 10px 0 0 10px;
 }
-/* 
-.mainDiv2 {
-  font-size: 40px;
-  margin-left: 1vw;
-  width: 34vw;
-  border-radius: 0 20px 20px 0;
-  background-color: #f3eed9;
-} */
 
-.mainDiv3 {
+.mainDiv2 {
   text-align: right;
   padding: 10px;
   color: white;
   border-radius: 0 0 0 10px;
   background-color: #b1b6a0;
-  margin-top: 1vw;
 }
 
-.mainDiv4 {
+.mainDiv3 {
   margin-left: 1vw;
   width: 34vw;
   border-radius: 0 10px 10px 0;
   background-color: #d8d2c1;
 }
 
-.mainImg1 {
+.mainImg {
   width: 45vw;
   border-radius: 10px 0 0 0;
   transition-duration: 0.2s;
-  padding-bottom: 1vw;
   background-color: white;
+  padding-bottom: 1vw;
 }
 
-.mainImg1:hover {
+.mainImg:hover {
   cursor: pointer;
   filter: brightness(90%);
 }
+
+.arrow {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.arrow:hover {
+  cursor: pointer;
+}
+.arrow span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-bottom: 3px solid #bfa5a4;
+  border-right: 3px solid #bfa5a4;
+  border-radius: 20%;
+  transform: rotate(45deg);
+  margin: -5px;
+  animation: animate 2s infinite;
+}
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-5px, -5px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+}
+/*------------------------------*/ /* Main.js */
 
 .sealDiv {
   background-color: white;

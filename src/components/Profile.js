@@ -108,11 +108,10 @@ class Profile extends Component {
   render() {
     return (
       <div
-        className="contents"
+        className="profile_contents"
         style={{
           height: "100vh",
           backgroundColor: "white",
-          // backgroundColor: "#FAF0E6",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -172,8 +171,7 @@ class Profile extends Component {
                 </button>
               </div>
             </div>
-          ) : // ) : this.state.signUping ? (
-          !this.state.signUping ? (
+          ) : !this.state.signUping ? (
             <div
               style={{
                 color: "white",

@@ -1,11 +1,10 @@
 import React from "react";
 import { Parallax, Background } from "react-parallax";
-import about1 from "../asset/about/h1.png";
-// import about1 from "../asset/about/about1.jpg";
-import about2 from "../asset/about/h2.png";
-import about3 from "../asset/about/h3.png";
-import about4 from "../asset/about/h4.png";
-import about5 from "../asset/about/h5.png";
+import about1 from "../asset/about/about1.png";
+import about2 from "../asset/about/about2.png";
+import about3 from "../asset/about/about3.png";
+import about4 from "../asset/about/about4.png";
+import about5 from "../asset/about/about5.png";
 import dots from "../asset/about/ryb3.png";
 
 const insideStyles = {
@@ -45,7 +44,7 @@ export default function About() {
                 overflow: "hidden",
               }}
             >
-              <div className="intro_title">
+              <div className="about_title">
                 풍물 연습
                 <div
                   className="fadein"
@@ -84,7 +83,7 @@ export default function About() {
                 overflow: "hidden",
               }}
             >
-              <div className="intro_title">
+              <div className="about_title">
                 <div>
                   <p>정기공연 ∙ 연등제 ∙ 해오름제</p>
                   <div
@@ -107,7 +106,6 @@ export default function About() {
         )}
       ></Parallax>
       <img className="dots" src={dots} />
-
       <Parallax
         bgImage={about3}
         bgImageStyle={{
@@ -128,7 +126,7 @@ export default function About() {
                 overflow: "hidden",
               }}
             >
-              <div className="intro_title">
+              <div className="about_title">
                 스터디
                 <div
                   className={percentage >= 1 ? "fadein" : "hidden"}
@@ -151,13 +149,12 @@ export default function About() {
         )}
       ></Parallax>
       <img className="dots" src={dots} />
-
       <Parallax strength={300}>
         <Background className="custom-bg">
           <img src={about4} />
         </Background>
         <div>
-          <div className="contents">
+          <div className="about_contents">
             <br />
             <br />
             + MT, 합숙, 소풍, 여행, 번개 +
@@ -209,11 +206,10 @@ export default function About() {
             지원 방법
             <br />
             <br />
-            풍방으로 오세요~
+            010-9481-2947
           </div>
         </div>
       </Parallax>
-      {/* <img className="dots" src={dots} /> */}
     </div>
   );
 }
