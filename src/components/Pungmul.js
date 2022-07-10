@@ -10,6 +10,8 @@ import styled from "styled-components";
 import { NavLink } from "react-router-dom";
 import DelayLink from "react-delay-link";
 
+//테스트용
+
 function getRandomColor() {
   console.log("random!");
   return "#" + Math.floor(Math.random() * 16777215).toString(16);
