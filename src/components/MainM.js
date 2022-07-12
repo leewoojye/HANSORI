@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 
-import MainPungmul from "./MainPungmul";
+import MainPungmulM from "./MainPungmulM";
 import GoogleCalendar from "./GoogleCalendar";
 
 import mainImg from "../asset/main/main1.jpg";
 import seal from "../asset/main/seal.png";
 import instruments from "../asset/mainM/instruments.png";
+import instruments_white from "../asset/mainM/instruments_white.png";
 import AboutM from "./AboutM";
 
 export default class MainM extends Component {
@@ -24,21 +25,19 @@ export default class MainM extends Component {
                 marginTop: "5vh",
               }}
             >
+              {/* <MainPungmulM /> */}
               <img
-                src={instruments}
+                src={instruments_white}
                 style={{
-                  width: "70vw",
+                  height: "65vh",
+                  filter: "invert(100)",
                 }}
               ></img>
-              <div class="arrow" onClick={() => fullpageApi.moveSectionDown()}>
-                <span></span>
+              <div class="arrowM" onClick={() => fullpageApi.moveSectionDown()}>
                 <span></span>
                 <span></span>
               </div>
             </div>
-            {/* <div className="section">
-              <AboutM />
-            </div> */}
             <div className="section">
               <GoogleCalendar />
             </div>

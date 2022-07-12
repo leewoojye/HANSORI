@@ -1,10 +1,12 @@
 import React, { useEffect } from "react";
 import logoM from "../asset/headerM/logo.png";
 import profile from "../asset/header/profile.png";
+import dots from "../asset/headerM/ryb4.png";
+import menuIcon from "../asset/headerM/ryb5.png";
 import { NavLink, withRouter } from "react-router-dom";
 import "../asset/css/Header.css";
-import { HiOutlineMenuAlt4 } from "react-icons/hi";
-import { MdClose } from "react-icons/md";
+import { IoMenu } from "react-icons/io5";
+import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 
 const HeaderM = ({ location, match, history }) => {
@@ -16,9 +18,13 @@ const HeaderM = ({ location, match, history }) => {
         <div className="wrap">
           <div className="styled_profile">
             {open ? (
-              <MdClose size="30" onClick={onToggle} />
+              <IoClose size="30" onClick={onToggle} />
             ) : (
-              <HiOutlineMenuAlt4 size="30" onClick={onToggle} />
+              <img
+                onClick={onToggle}
+                src={menuIcon}
+                style={{ width: "25px" }}
+              />
             )}
           </div>
           <div className="styled_logo">
@@ -32,9 +38,9 @@ const HeaderM = ({ location, match, history }) => {
               <img src={logoM} height="35" alt="" />
             </NavLink>
           </div>
-
           <div className="styled_profile">
-            <NavLink className="Menu" to="/profile">
+            <NavLink className="Menu" to="/pungsa">
+              {/* <NavLink className="Menu" to="/profile"> */}
               <div style={{ color: "white" }}>
                 {window.localStorage.getItem("isLogin") == null ? (
                   <img
@@ -67,7 +73,7 @@ const HeaderM = ({ location, match, history }) => {
               onToggle();
             }}
           >
-            동아리 소개
+            동아리
           </NavLink>
           <br />
           <br />
@@ -79,6 +85,30 @@ const HeaderM = ({ location, match, history }) => {
           >
             갤러리
           </NavLink>
+          <br />
+          <br />
+          <NavLink
+            to="/pungsa"
+            onClick={() => {
+              onToggle();
+            }}
+          >
+            풍사
+          </NavLink>
+          <br />
+          <br />
+          <NavLink
+            to="/pungsa"
+            // to="/pungmul"
+            onClick={() => {
+              onToggle();
+            }}
+          >
+            풍물
+          </NavLink>{" "}
+          <br />
+          <br />
+          <img src={dots} className="headerDotsM" />
         </div>
       )}
     </>

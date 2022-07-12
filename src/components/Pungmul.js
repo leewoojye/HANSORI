@@ -39,7 +39,6 @@ function Pungmul() {
         style={{
           height: "100vh",
           backgroundColor: "white",
-          // backgroundColor: "#D8D2C1",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -50,10 +49,10 @@ function Pungmul() {
           <div className="showName">
             <DelayLink delay={300} to="/pungmul/kkwaenggwari">
               <img
-                className="inst"
+                className="inst_black"
                 src={_inst[numbers[0]]}
                 alt=""
-                style={{ width: "46px", filter: "invert(100%)" }}
+                style={{ width: "46px" }}
                 onClick={() => {
                   setTimeout(500);
                 }}
@@ -64,10 +63,10 @@ function Pungmul() {
           <div className="showName">
             <DelayLink delay={300} to="/pungmul/janggu">
               <img
-                className="inst"
+                className="inst_black"
                 src={_inst[numbers[1]]}
                 alt=""
-                style={{ width: "112px", filter: "invert(100%)" }}
+                style={{ width: "112px" }}
               />
             </DelayLink>
             <div className="text">장구</div>
@@ -75,10 +74,10 @@ function Pungmul() {
           <div className="showName">
             <DelayLink delay={300} to="/pungmul/drum">
               <img
-                className="inst"
+                className="inst_black"
                 src={_inst[numbers[2]]}
                 alt=""
-                style={{ width: "86px", filter: "invert(100%)" }}
+                style={{ width: "86px" }}
               />
             </DelayLink>
             <div className="text">북</div>
@@ -86,10 +85,10 @@ function Pungmul() {
           <div className="showName">
             <DelayLink delay={300} to="/pungmul/jing">
               <img
-                className="inst"
+                className="inst_black"
                 src={_inst[numbers[3]]}
                 alt=""
-                style={{ width: "96px", filter: "invert(100%)" }}
+                style={{ width: "96px" }}
               />
             </DelayLink>
             <div className="text">징</div>
@@ -97,10 +96,10 @@ function Pungmul() {
           <div className="showName">
             <DelayLink delay={300} to="/pungmul/sogo">
               <img
-                className="inst"
+                className="inst_black"
                 src={_inst[numbers[4]]}
                 alt=""
-                style={{ width: "64px", filter: "invert(100%)" }}
+                style={{ width: "64px" }}
               />
             </DelayLink>
             <div className="text">소고</div>

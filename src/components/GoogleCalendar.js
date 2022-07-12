@@ -44,7 +44,6 @@ class GoogleCalendar extends React.Component {
       <div
         style={{
           backgroundColor: "white",
-          height: "100vh",
           borderRight: "10px solid white",
           borderLeft: "10px solid white",
         }}

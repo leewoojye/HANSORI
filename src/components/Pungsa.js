@@ -4,7 +4,12 @@ function Pungsa() {
   return (
     <div
       className="contents"
-      style={{ height: "100vh", paddingTop: "50vh", backgroundColor: "black" }}
+      style={{
+        color: "black",
+        height: "100vh",
+        paddingTop: "50vh",
+        backgroundColor: "white",
+      }}
     >
       페이지 준비중입니다.🐘
     </div>

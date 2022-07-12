@@ -115,6 +115,10 @@ a {
   padding: 10px 0;
   filter: brightness(90%);
 }
+.headerDotsM {
+  height: 20px;
+  filter: brightness(90%);
+}
 /*------------------------------*/ /* About.js */
 
 /* AboutM.js */ /*------------------------------*/
@@ -278,7 +282,7 @@ a {
   top: 0;
   padding-top: 100px;
   background-color: white;
-  height: 80vh;
+  height: 100vh;
   width: 100vw;
   z-index: 100;
   text-align: center;
@@ -501,11 +505,21 @@ input:focus {
 .instruments {
   transform: translateX(50%);
 }
+.instrumentsM {
+  transform: translateX(50%);
+  margin-top: 5vh;
+}
 
 .inst {
   transform: translateX(-50%);
   display: flex;
   transition: 0.3s;
+}
+.inst_black {
+  transform: translateX(-50%);
+  display: flex;
+  transition: 0.3s;
+  filter: invert(100);
 }
 
 .text {
@@ -625,8 +639,8 @@ input:focus {
   display: block;
   width: 10px;
   height: 10px;
-  border-bottom: 3px solid #bfa5a4;
-  border-right: 3px solid #bfa5a4;
+  border-bottom: 3px solid #c4bbb1;
+  border-right: 3px solid #c4bbb1;
   border-radius: 20%;
   transform: rotate(45deg);
   margin: -5px;
@@ -638,6 +652,31 @@ input:focus {
 .arrow span:nth-child(3) {
   animation-delay: -0.4s;
 }
+
+.arrowM {
+  position: absolute;
+  top: 93%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.arrowM:hover {
+  cursor: pointer;
+}
+.arrowM span {
+  display: block;
+  width: 7px;
+  height: 7px;
+  border-bottom: 2px solid black;
+  border-right: 2px solid black;
+  border-radius: 20%;
+  transform: rotate(45deg);
+  margin: -3.5px;
+  animation: animate 2s infinite;
+}
+.arrowM span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
 @keyframes animate {
   0% {
     opacity: 0;
