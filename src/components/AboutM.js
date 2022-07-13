@@ -189,10 +189,15 @@ export default function AboutM() {
           }}
         >
           <div style={insideStyles}>
-            지원 방법
+            Instagram
             <br />
             <br />
-            010-9481-2947
+            <a
+              href="https://www.instagram.com/hansori_dongguk/"
+              style={{ fontSize: "larger" }}
+            >
+              @hansori_dongguk
+            </a>
           </div>
         </div>
       </Parallax>

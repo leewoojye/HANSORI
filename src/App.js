@@ -25,6 +25,9 @@ import UploadBoard from "./components/UploadBoard";
 import MediaQuery from "react-responsive";
 import { useMediaQuery } from "react-responsive";
 import AboutM from "./components/AboutM";
+import PungsaM from "./components/PungsaM";
+import PungmulM from "./components/PungmulM";
+import FooterM from "./components/FooterM";
 
 function App() {
   const isMobile = useMediaQuery({
@@ -43,10 +46,12 @@ function App() {
       <Route path="/about" component={About} />
       <Route path="/gallery" component={Gallery} />
       <Route path="/pungsa" component={Pungsa} />
+      <Route path="/pungsaM" component={PungsaM} />
       <Route path="/jokbo" component={Jokbo} />
       <Route path="/profile" component={Profile} />
       <Route path="/board" exact={true} component={Board} />
       <Route path="/pungmul" exact={true} component={Pungmul} />
+      <Route path="/pungmulM" exact={true} component={PungmulM} />
       <Route path="/pungmul/kkwaenggwari" component={Kkwaenggwari} />
       <Route path="/pungmul/janggu" component={Janggu} />
       <Route path="/pungmul/drum" component={Drum} />
@@ -57,7 +62,7 @@ function App() {
       <Route path="/board/notice/upload" component={UploadNotice} />
       <Route path="/board/upload" component={UploadBoard} />
       <Route path="/aboutM" component={AboutM} />
-      <Footer />
+      {isMobile ? <FooterM /> : <FooterM />}
     </>
   );
 }

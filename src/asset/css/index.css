@@ -47,21 +47,17 @@ a {
 }
 
 .Footer {
-  height: 50px;
-  width: 100%;
-  padding: 10px 0;
+  text-align: center;
+  font-size: 30px;
+  margin: 30px;
+  line-height: 45px;
 }
 
-.Footer .wrap {
-  justify-content: center;
-}
-
-.Footer .left {
-}
-
-.Footer .right {
-  margin-left: 20px;
-  line-height: 20px;
+.FooterM {
+  text-align: center;
+  font-size: 10px;
+  margin: 10px;
+  line-height: 15px;
 }
 
 /* Gallery.js */ /*------------------------------*/
@@ -294,6 +290,7 @@ a {
   width: 20%;
   display: flex;
   align-items: center;
+  margin-top: 15px;
   justify-content: center;
 }
 

@@ -1,12 +1,12 @@
 import React from "react";
 import pungsa_cover from "../asset/pungsa/pungsa_cover.png";
 
-function Pungsa() {
+function PungsaM() {
   return (
     <div className="contents">
-      <img src={pungsa_cover} alt="" style={{ height: "100vh" }} />
+      <img src={pungsa_cover} alt="" style={{ width: "100vw" }} />
     </div>
   );
 }
 
-export default Pungsa;
+export default PungsaM;

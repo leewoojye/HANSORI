@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logo from "../asset/header/logo.png";
+import logo from "../asset/header/logo6.png";
 import profile from "../asset/header/profile.png";
 import { NavLink, withRouter } from "react-router-dom";
 import "../asset/css/Header.css";
@@ -19,7 +19,7 @@ const Header = ({ location, match, history }) => {
             >
               <img
                 src={logo}
-                height="35"
+                height="60"
                 alt=""
                 onClick={() => {
                   window.localStorage.removeItem("changeColor");
@@ -34,7 +34,7 @@ const Header = ({ location, match, history }) => {
             <NavLink className="Menu" to="/gallery">
               갤러리
             </NavLink>
-            <NavLink className="Menu" to="/board">
+            <NavLink className="Menu" to="/pungsa">
               풍사
             </NavLink>
             <NavLink className="Menu" to="/pungmul">

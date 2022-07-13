@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logoM from "../asset/headerM/logo.png";
+import logoM from "../asset/header/logo6.png";
 import profile from "../asset/header/profile.png";
 import dots from "../asset/headerM/ryb4.png";
 import menuIcon from "../asset/headerM/ryb5.png";
@@ -35,7 +35,7 @@ const HeaderM = ({ location, match, history }) => {
                 if (location.pathname === "/") window.location.reload();
               }}
             >
-              <img src={logoM} height="35" alt="" />
+              <img src={logoM} height="65" alt="" />
             </NavLink>
           </div>
           <div className="styled_profile">
@@ -88,7 +88,7 @@ const HeaderM = ({ location, match, history }) => {
           <br />
           <br />
           <NavLink
-            to="/pungsa"
+            to="/pungsaM"
             onClick={() => {
               onToggle();
             }}
@@ -98,14 +98,13 @@ const HeaderM = ({ location, match, history }) => {
           <br />
           <br />
           <NavLink
-            to="/pungsa"
-            // to="/pungmul"
+            to="/pungmulM"
             onClick={() => {
               onToggle();
             }}
           >
             풍물
-          </NavLink>{" "}
+          </NavLink>
           <br />
           <br />
           <img src={dots} className="headerDotsM" />
