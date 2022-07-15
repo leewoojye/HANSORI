@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from "react";
 
-const Board = () => {
+const BoardM = () => {
   const canvasRef = useRef(null);
   const contextRef = useRef(null);
 
@@ -57,4 +57,4 @@ const Board = () => {
   );
 };
 
-export default Board;
+export default BoardM;

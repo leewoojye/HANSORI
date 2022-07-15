@@ -5,13 +5,16 @@ import dots from "../asset/headerM/ryb4.png";
 import menuIcon from "../asset/headerM/ryb5.png";
 import { NavLink, withRouter } from "react-router-dom";
 import "../asset/css/Header.css";
-import { IoMenu } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 import { useState } from "react";
 
 const HeaderM = ({ location, match, history }) => {
   const [open, setOpen] = useState(false);
-  const onToggle = () => setOpen(!open);
+  const onToggle = () => {
+    if (!open) {
+    }
+    setOpen(!open);
+  };
   return (
     <>
       <div className="styled_headerM">
@@ -24,12 +27,12 @@ const HeaderM = ({ location, match, history }) => {
                 onClick={onToggle}
                 src={menuIcon}
                 style={{ width: "25px" }}
+                alt=""
               />
             )}
           </div>
           <div className="styled_logo">
             <NavLink
-              className="Menu"
               to="/"
               onClick={() => {
                 if (location.pathname === "/") window.location.reload();
@@ -39,7 +42,7 @@ const HeaderM = ({ location, match, history }) => {
             </NavLink>
           </div>
           <div className="styled_profile">
-            <NavLink className="Menu" to="/pungsa">
+            <NavLink to="/board">
               {/* <NavLink className="Menu" to="/profile"> */}
               <div style={{ color: "white" }}>
                 {window.localStorage.getItem("isLogin") == null ? (
@@ -68,6 +71,7 @@ const HeaderM = ({ location, match, history }) => {
       {open && (
         <div className="menuM">
           <NavLink
+            className="menuMN"
             to="/aboutM"
             onClick={() => {
               onToggle();
@@ -78,6 +82,7 @@ const HeaderM = ({ location, match, history }) => {
           <br />
           <br />
           <NavLink
+            className="menuMN"
             to="/gallery"
             onClick={() => {
               onToggle();
@@ -88,6 +93,7 @@ const HeaderM = ({ location, match, history }) => {
           <br />
           <br />
           <NavLink
+            className="menuMN"
             to="/pungsaM"
             onClick={() => {
               onToggle();
@@ -98,6 +104,7 @@ const HeaderM = ({ location, match, history }) => {
           <br />
           <br />
           <NavLink
+            className="menuMN"
             to="/pungmulM"
             onClick={() => {
               onToggle();
@@ -107,7 +114,7 @@ const HeaderM = ({ location, match, history }) => {
           </NavLink>
           <br />
           <br />
-          <img src={dots} className="headerDotsM" />
+          <img src={dots} className="headerDotsM" alt="" />
         </div>
       )}
     </>

@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import profile_bg from "../asset/profile/profile_bg.png";
 
 class Profile extends Component {
   constructor(props) {

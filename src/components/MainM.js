@@ -25,7 +25,6 @@ export default class MainM extends Component {
                 marginTop: "5vh",
               }}
             >
-              {/* <MainPungmulM /> */}
               <img
                 src={instruments_white}
                 style={{

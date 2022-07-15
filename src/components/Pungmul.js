@@ -7,11 +7,11 @@ import inst3 from "../asset/instruments/inst3.png";
 import inst4 from "../asset/instruments/inst4.png";
 import inst5 from "../asset/instruments/inst5.png";
 
-import sound1 from '../asset/audio/metal.mp3'
-import sound2 from '../asset/audio/janggu.mp3'
-import sound3 from '../asset/audio/drum.mp3'
-import sound4 from '../asset/audio/jing.mp3'
-import sound5 from '../asset/audio/sogo.mp3'
+import sound1 from "../asset/audio/metal1.mp3";
+import sound2 from "../asset/audio/janggu1.mp3";
+import sound3 from "../asset/audio/drum1.mp3";
+import sound4 from "../asset/audio/jing1.mp3";
+import sound5 from "../asset/audio/sogo1.mp3";
 
 const index = [0, 1, 2, 3, 4];
 function shuffle(array) {
@@ -24,11 +24,11 @@ function getRandomNumber(min, max) {
 }
 
 const _inst = [
-  [inst1, "쇠"],
-  [inst2, "장구"],
-  [inst3, "북"],
-  [inst4, "징"],
-  [inst5, "소고"],
+  [inst1, "쇠", 0],
+  [inst2, "장구", 1],
+  [inst3, "북", 2],
+  [inst4, "징", 3],
+  [inst5, "소고", 4],
 ];
 
 const _sound = [
@@ -37,7 +37,7 @@ const _sound = [
   new Audio(sound3),
   new Audio(sound4),
   new Audio(sound5),
-]
+];
 
 const _size = [
   getRandomNumber(0.1, 0.2),
@@ -58,15 +58,51 @@ const _position = [
 function Pungmul() {
   const [size, setSize] = useState(window.innerHeight);
   useEffect(() => {
-      function handleResize() {
-          setSize(window.innerWidth > window.innerHeight
-              ? window.innerHeight : window.innerWidth);
-      }
-      window.addEventListener('resize', handleResize);
-      return () => {
-          window.removeEventListener('resize', handleResize);
-      }
+    function handleResize() {
+      setSize(
+        window.innerWidth > window.innerHeight
+          ? window.innerHeight
+          : window.innerWidth
+      );
+    }
+    window.addEventListener("resize", handleResize);
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
   }, []);
+
+  // const _i = [
+  //   [0, 0, 0, 1, 1],
+  //   [1, 0, 1, 0, 1],
+  //   [2, 0, 1, 1, 0],
+  //   [3, 1, 1, 0, 0],
+  // ];
+
+  // const showInst = () =>
+  //   _i.map((i) => {
+  //     return (
+  //       <div
+  //         className="showName"
+  //         style={{
+  //           position: "relative",
+
+  //           top: i[1] && window.innerHeight * _position[i[0]],
+  //           left: i[2] && window.innerWidth * _position[i[0]],
+  //           bottom: i[3] && window.innerHeight * _position[i[0]],
+  //           right: i[4] && window.innerWidth * _position[i[0]],
+  //         }}
+  //       >
+  //         <img
+  //           className="inst"
+  //           src={_inst[index[i[0] + 1]][0]}
+  //           alt=""
+  //           style={{ height: _size[i[0] + 1] * size, filter: "invert(100%)" }}
+  //           onClick={() => _sound[index[i[0] + 1]].play()}
+  //         />
+  //         <div className="text">{_inst[index[i[0] + 1]][1]}</div>
+  //       </div>
+  //     );
+  //   });
 
   return (
     <>
@@ -82,7 +118,7 @@ function Pungmul() {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)",
+            transform: "translateY(-50%)",
           }}
         >
           <img
@@ -94,7 +130,6 @@ function Pungmul() {
           />
           <div className="text">{_inst[index[0]][1]}</div>
         </div>
-
         <div
           className="showName"
           style={{
