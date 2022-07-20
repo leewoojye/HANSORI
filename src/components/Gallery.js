@@ -1,7 +1,5 @@
 import ResponsiveGallery from "react-responsive-gallery";
-import { BsPlusSquare } from "react-icons/bs";
-import React, { useState } from "react";
-import Modal from "react-modal";
+import React from "react";
 import "../asset/css/Modal.css";
 
 import pic1 from "../asset/gallery/pic1.jpg";
@@ -23,12 +21,6 @@ import pic17 from "../asset/gallery/pic17.jpg";
 import pic18 from "../asset/gallery/pic18.jpg";
 import pic19 from "../asset/gallery/pic19.jpg";
 import pic20 from "../asset/gallery/pic20.jpg";
-import pic21 from "../asset/gallery/pic21.jpg";
-import pic22 from "../asset/gallery/pic22.jpg";
-import pic23 from "../asset/gallery/pic23.jpg";
-import pic25 from "../asset/gallery/pic25.jpg";
-
-import axios from "axios";
 
 export default function Gallery() {
   const IMAGES = [
@@ -90,18 +82,6 @@ export default function Gallery() {
     },
     {
       src: pic20,
-    },
-    {
-      src: pic21,
-    },
-    {
-      src: pic22,
-    },
-    {
-      src: pic23,
-    },
-    {
-      src: pic25,
     },
   ];
 

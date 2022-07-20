@@ -1,49 +1,60 @@
-import React from "react";
-import instrument from "../asset/pungmul/instrument.png";
-import { useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 
-function Board() {
-  const [email, setEmail] = useState("asdf");
+const Board = () => {
+  const canvasRef = useRef(null);
+  const contextRef = useRef(null);
 
-  function handleLogin() {
-    const post = {
-      query: "SELECT * FROM USER;",
-    };
-    console.log(post.query);
+  const [ctx, setCtx] = useState();
+  const [isDrawing, setIsDrawing] = useState(false);
 
-    fetch("http://192.168.35.108:8081/SQL1", {
-      method: "post",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify(post),
-    })
-      .then((res) => res.json())
-      .then((json) => {
-        console.log(json);
-        setEmail(json.Email);
-      });
-  }
+  useEffect(() => {
+    const canvas = canvasRef.current;
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const context = canvas.getContext("2d");
+    context.strokeStyle = "black";
+    context.lineWidth = 2;
+    contextRef.current = context;
+
+    setCtx(context);
+  }, []);
+
+  const startDrawing = () => {
+    setIsDrawing(true);
+  };
+
+  const finishDrawing = () => {
+    setIsDrawing(false);
+  };
+
+  const drawing = ({ nativeEvent }) => {
+    const { offsetX, offsetY } = nativeEvent;
+
+    if (ctx) {
+      if (!isDrawing) {
+        ctx.beginPath();
+        ctx.moveTo(offsetX, offsetY);
+      } else {
+        ctx.lineTo(offsetX, offsetY);
+        ctx.stroke();
+      }
+    }
+  };
 
   return (
-    <div
-      className="contents"
-      style={{
-        height: "100vh",
-        backgroundColor: "#C1B8AF",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-      }}
-    >
-      <div class="container">
-        <div class="card">
-          <img src={instrument} class="face front" alt="" />
-          <img src={instrument} class="face" alt="" />
-        </div>
-        <button onClick={handleLogin}>test</button>
-      </div>
-      <div>{email}</div>
+    <div>
+      <canvas
+        ref={canvasRef}
+        onMouseDown={startDrawing}
+        onMouseUp={finishDrawing}
+        onMouseMove={drawing}
+        onTouchStart={startDrawing}
+        onTouchEnd={finishDrawing}
+        onTouchMove={drawing}
+      ></canvas>
     </div>
   );
-}
+};
 
 export default Board;

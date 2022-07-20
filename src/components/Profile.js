@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
+import profile_bg from "../asset/profile/profile_bg.png";
 
 class Profile extends Component {
   constructor(props) {
@@ -108,11 +109,10 @@ class Profile extends Component {
   render() {
     return (
       <div
-        className="contents"
+        className="profile_contents"
         style={{
           height: "100vh",
           backgroundColor: "white",
-          // backgroundColor: "#FAF0E6",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -172,8 +172,7 @@ class Profile extends Component {
                 </button>
               </div>
             </div>
-          ) : // ) : this.state.signUping ? (
-          !this.state.signUping ? (
+          ) : !this.state.signUping ? (
             <div
               style={{
                 color: "white",

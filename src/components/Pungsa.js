@@ -1,12 +1,15 @@
 import React from "react";
+import pungsa_cover from "../asset/pungsa/pungsa_cover.png";
 
 function Pungsa() {
   return (
-    <div
-      className="contents"
-      style={{ height: "100vh", paddingTop: "50vh", backgroundColor: "black" }}
-    >
-      페이지 준비중입니다.🐘
+    <div className="contents">
+      <img
+        className="ptest"
+        src={pungsa_cover}
+        alt=""
+        style={{ height: "100vh" }}
+      />
     </div>
   );
 }
