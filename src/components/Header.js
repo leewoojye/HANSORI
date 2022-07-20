@@ -1,10 +1,21 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import logo from "../asset/header/logo6.png";
 import profile from "../asset/header/profile.png";
 import { NavLink, withRouter } from "react-router-dom";
 import "../asset/css/Header.css";
 
 const Header = ({ location, match, history }) => {
+
+  const [scrollLocation, setLocation] = useState(0);
+
+  window.addEventListener('scroll', () => {
+    let currentLocation = document.documentElement.scrollTop; // 현재 스크롤바 위치
+
+    setLocation(currentLocation);
+  })
+
+  if (scrollLocation !== 0) return null;
+  
   return (
     <>
       <div className="styled_header">

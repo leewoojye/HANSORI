@@ -5,7 +5,7 @@ function Drum() {
     <div>
       <br />
       <br />
-      <br />ffffffffffffff
+      <br />ffffff
       <br />
       <br />북
     </div>
