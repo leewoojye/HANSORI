@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./components/Header";
 import HeaderM from "./components/HeaderM";
 import { Route } from "react-router-dom";
+import { useLocation } from 'react-router-dom'
 import Footer from "./components/Footer";
 import About from "./components/About";
 import Gallery from "./components/Gallery";
@@ -35,9 +36,11 @@ function App() {
     query: "(max-width: 767px)",
   });
 
+  let location = useLocation();
+
   return (
     <>
-      {isMobile ? <HeaderM /> : <Header />}
+      {isMobile ? <HeaderM /> : (location.pathname === "/" ? null : <Header />)}
       {isMobile ? (
         <Route path="/" exact={true} component={MainM} />
       ) : (

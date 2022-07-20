@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
+import Header from "../components/Header";
 
 import MainPungmul from "./MainPungmul";
 import GoogleCalendar from "./GoogleCalendar";
@@ -14,6 +15,7 @@ export default class Main extends Component {
         scrollOverflow={true}
         render={({ state, fullpageApi }) => (
           <div id="fullpage-wrapper">
+            <Header />
             <div className="section " style={{ backgroundColor: "white" }}>
               <div className="section1 ">
                 <div className="mainDiv1 ">
