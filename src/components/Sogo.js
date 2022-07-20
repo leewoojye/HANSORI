@@ -14,10 +14,16 @@ class Sogo extends Component {
       query: "SELECT * FROM USER;", //mysql로 전송할 쿼리 문
     };
 
-    fetch("http://localhost:8080/SQL1", {
+    fetch("https://127.0.0.1:8443/SQL1", {
+      // fetch("https://3.35.150.77:8443/SQL1", {
+      // fetch("https://3.35.150.77:3306/SQL1", {
       //mysql fetch 서버 주소
       method: "post", // 통신방법
-      headers: { "content-type": "application/json" },
+      withCredentials: true, // 쿠키 cors 통신 설정
+      headers: {
+        "content-type": "application/json",
+        "Access-Control-Allow-Origin": "*",
+      },
       body: JSON.stringify(post),
     })
       .then((res) => res.json())

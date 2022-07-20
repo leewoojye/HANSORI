@@ -42,7 +42,7 @@ const HeaderM = ({ location, match, history }) => {
             </NavLink>
           </div>
           <div className="styled_profile">
-            <NavLink to="/board">
+            <NavLink to="/pungmul/sogo">
               {/* <NavLink className="Menu" to="/profile"> */}
               <div style={{ color: "white" }}>
                 {window.localStorage.getItem("isLogin") == null ? (
