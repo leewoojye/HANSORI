@@ -30,7 +30,8 @@ class Pungsa extends Component {
     };
 
     console.log(post.query);
-    fetch("http://3.35.150.77:3306/SQL2", {
+    fetch("https://hansori.net:8443/SQL2", {
+      // fetch("http://3.35.150.77:3306/SQL2", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(post),

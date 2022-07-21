@@ -1,5 +1,9 @@
 import React from "react";
+import { BsCheck } from "react-icons/bs";
+import { BsX } from "react-icons/bs";
+import { BsPlus } from "react-icons/bs";
 import { Component } from "react/cjs/react.production.min";
+import Write from "./Write";
 
 function createData(content) {
   return { content };
@@ -10,6 +14,8 @@ class PungsaM extends Component {
     super(props);
     this.state = {
       article: [{ content: "" }],
+      modalVisible: false,
+      writeContent: "",
     };
 
     this.getContent();
@@ -18,7 +24,7 @@ class PungsaM extends Component {
   showContent = () =>
     this.state.article.map((atc) => {
       return (
-        <div className="pungsaContent">
+        <div>
           {atc.content} <br /> <br />
         </div>
       );
@@ -30,7 +36,8 @@ class PungsaM extends Component {
     };
 
     console.log(post.query);
-    fetch("http://3.35.150.77:3306/SQL2", {
+    fetch("https://hansori.net:8443/SQL2", {
+      // fetch("http://3.35.150.77:3306/SQL2", {
       method: "post",
       headers: { "content-type": "application/json" },
       body: JSON.stringify(post),
@@ -52,10 +59,87 @@ class PungsaM extends Component {
     });
   };
 
+  handleModal = () => {
+    console.log("sssss");
+    this.setState({
+      modalVisible: !this.state.modalVisible,
+    });
+  };
+
+  write = () => {
+    const post = {
+      query:
+        "INSERT INTO pungsa (content) VALUES ('" +
+        this.state.writeContent +
+        "');",
+    };
+    console.log(post.query);
+
+    fetch("https://hansori.net:8443/SQL1", {
+      method: "post",
+      headers: { "content-type": "application/json" },
+      body: JSON.stringify(post),
+    }).then(() => {
+      window.location.reload();
+    });
+  };
+
+  onChange = (e) => {
+    const { value, name } = e.target; // 우선 e.target 에서 name 과 value 를 추출
+    this.setState({
+      writeContent: value,
+    });
+  };
+
   render() {
+    console.log(this.state.writeContent);
     return (
       <>
         <div className="pungsa">{this.showContent()}</div>
+        {this.state.modalVisible && (
+          <div
+            visible={this.state.modalVisible}
+            closable={true}
+            maskClosable={true}
+            onClose={this.handleModal}
+          >
+            <div className="writeDiv">
+              <textarea
+                className="writeContent"
+                placeholder="여기에 작성하세요."
+                name="content"
+                value={this.state.writeContent}
+                onChange={this.onChange}
+              />
+              <div className="buttons">
+                <BsX
+                  onClick={this.handleModal}
+                  size="5vh"
+                  className="completeButton"
+                />
+                {this.state.writeContent != "" && (
+                  <BsCheck
+                    className="completeButton"
+                    onClick={this.write}
+                    size="5vh"
+                  />
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {window.localStorage.getItem("isLogin") && !this.state.modalVisible && (
+          <div className="writeButtonDiv">
+            <button className="writeButton" onClick={this.handleModal}>
+              <BsPlus
+                onClick={this.handleModal}
+                size="5vh"
+                className="bsPlus"
+              />
+            </button>
+          </div>
+        )}
       </>
     );
   }

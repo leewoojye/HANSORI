@@ -29,6 +29,7 @@ import PungsaM from "./components/PungsaM";
 import PungmulM from "./components/PungmulM";
 import FooterM from "./components/FooterM";
 import BoardM from "./components/BoardM";
+import ProfileM from "./components/ProfileM";
 
 function App() {
   const isMobile = useMediaQuery({
@@ -39,7 +40,7 @@ function App() {
 
   return (
     <>
-      {isMobile ? <HeaderM /> : (location.pathname === "/" ? null : <Header />)}
+      {isMobile ? <HeaderM /> : location.pathname === "/" ? null : <Header />}
       {isMobile ? (
         <Route path="/" exact={true} component={MainM} />
       ) : (
@@ -51,8 +52,9 @@ function App() {
       <Route path="/pungsa" component={Pungsa} />
       <Route path="/pungsaM" component={PungsaM} />
       <Route path="/jokbo" component={Jokbo} />
-      {/* <Route path="/profile" component={Profile} /> */}
-      <Route path="/profile" component={Board} />
+      <Route path="/profile" component={Profile} />
+      <Route path="/profileM" component={ProfileM} />
+      {/* <Route path="/profile" component={Board} /> */}
       <Route path="/board" exact={true} component={Board} />
       <Route path="/boardM" exact={true} component={BoardM} />
       <Route path="/pungmul" exact={true} component={Pungmul} />

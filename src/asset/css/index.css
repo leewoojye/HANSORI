@@ -472,8 +472,64 @@ input:focus {
   margin: 5vh;
   height: 10vh;
 }
+
 /*------------------------------*/ /* Profile.js */
 
+/* ProfileM.js */ /*------------------------------*/
+.profileM {
+  padding-top: 7vh;
+  width: 80vw;
+  height: 30vh;
+  background-color: #d8d2c1;
+  border-radius: 10px;
+  font-family: "NamsanB";
+}
+
+.googleLoginM {
+  margin-top: 7vh;
+}
+
+.signUpImgM {
+  margin: 1.5vh;
+  height: 7vh;
+}
+
+.signUpDivM {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 10px;
+  padding-right: 10px;
+  width: 25vw;
+  height: 3vh;
+
+  border: 2px solid rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.signUpInputM {
+  font-size: 15px;
+  width: 15vw;
+  height: 3vh;
+  background: none;
+}
+.signUpM {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 1vh;
+}
+.signUpButtonM {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  background-color: #faf0e6;
+  margin-top: 1vh;
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
+}
+/*------------------------------*/ /* ProfileM.js */
 .container {
   width: 100px;
   height: 500px;
@@ -795,9 +851,85 @@ textarea:focus {
   padding-top: 3vh;
   padding-left: 7vw;
   padding-right: 7vw;
+  font-family: "Hand1";
+  font-size: 30px;
 }
 
-.pungsaContent {
-  font-size: 30px;
+.writeButtonDiv {
+  text-align: center;
+  background: none;
+
+  height: 5vh;
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+
+  padding-bottom: 2vh;
+}
+
+.writeButton {
+  color: black;
+  background: none;
+  height: 5vh;
+}
+
+.cancelButton {
+  color: black;
+  background: none;
+  height: 5vh;
+  transform: translateX(-40vw) rotate(45deg);
+}
+
+.writeDiv {
+  text-align: center;
+
+  height: 35vh;
+  width: 100vw;
+  position: fixed;
+  bottom: 2vh;
+}
+
+.writeContent {
+  background-color: #fff7e7;
+  /* box-shadow: 0 0 5px 10px #fff7e7; */
+  position: relative;
+  top: 5vh;
+  width: 80vw;
+  height: 25vh;
+  border-radius: 20px;
+  vertical-align: middle;
+
+  text-align: center;
   font-family: "Hand1";
+  font-size: 30px;
+
+  resize: none;
+  padding: 20px;
+}
+
+.completeButton {
+  position: relative;
+  bottom: 0;
+  height: 5vh;
+  border-radius: 10px;
+  font-family: "NamsanB";
+  font-size: 20px;
+}
+
+.buttons {
+  background: none;
+  position: relative;
+  bottom: 0;
+  height: 5vh;
+  padding-left: 6vw;
+  padding-right: 6vw;
+  width: 90vw;
+  display: flex;
+  justify-content: space-between;
+}
+
+.bsPlus {
+  background-color: #fff7e7;
+  /* box-shadow: 0 0 5px 5px #fff7e7; */
+  border-radius: 50%;
 }

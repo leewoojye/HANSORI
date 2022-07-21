@@ -2,9 +2,8 @@ import React, { Component } from "react";
 import { GoogleLogin, GoogleLogout } from "react-google-login";
 import { FaEyeSlash } from "react-icons/fa";
 import { FaEye } from "react-icons/fa";
-import profile_bg from "../asset/profile/profile_bg.png";
 
-class Profile extends Component {
+class ProfileM extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -118,9 +117,9 @@ class Profile extends Component {
           alignItems: "center",
         }}
       >
-        <div className="profile">
+        <div className="profileM">
           {window.localStorage.getItem("isLogin") ? (
-            <div className="googleLogin">
+            <div className="googleLoginM">
               <GoogleLogout
                 clientId="835389304145-pll2ngg9i01e00vajc7svevd555h1g6b.apps.googleusercontent.com"
                 buttonText="로그아웃"
@@ -136,8 +135,8 @@ class Profile extends Component {
                 fontSize: "30px",
               }}
             >
-              <div style={{ fontSize: "40px" }}>환영합니다.</div>
-              <div className="googleLogin">
+              환영합니다.
+              <div className="googleLoginM">
                 <GoogleLogin
                   clientId="835389304145-pll2ngg9i01e00vajc7svevd555h1g6b.apps.googleusercontent.com"
                   buttonText="Google로 로그인"
@@ -149,10 +148,10 @@ class Profile extends Component {
                 style={{
                   display: "flex",
                   color: "black",
-                  paddingTop: "15vh",
+                  paddingTop: "7vh",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "15px",
+                  fontSize: "10px",
                 }}
               >
                 <div
@@ -181,8 +180,8 @@ class Profile extends Component {
                 fontSize: "30px",
               }}
             >
-              <div style={{ fontSize: "40px" }}>회원가입</div>
-              <div className="googleLogin">
+              회원가입
+              <div className="googleLoginM">
                 <GoogleLogin
                   clientId="835389304145-pll2ngg9i01e00vajc7svevd555h1g6b.apps.googleusercontent.com"
                   buttonText="Google로 회원가입"
@@ -194,10 +193,10 @@ class Profile extends Component {
                 style={{
                   display: "flex",
                   color: "black",
-                  paddingTop: "15vh",
+                  paddingTop: "7vh",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "15px",
+                  fontSize: "10px",
                 }}
               >
                 <div
@@ -220,25 +219,26 @@ class Profile extends Component {
           ) : (
             <div
               style={{
-                color: "black",
+                color: "white",
                 alignItems: "center",
                 justifyContent: "center",
                 fontSize: "30px",
               }}
             >
-              <div style={{ fontSize: "40px" }}>거의 끝났습니다!</div>
+              거의 끝났습니다!
+              <br />
               <img
                 style={{ borderRadius: "70%" }}
                 src={process.env.PUBLIC_URL + this.state.imageUrl}
-                className="signUpImg"
+                className="signUpImgM"
                 alt=""
               />
-              <div className="signUp">풍방 비밀번호를 입력해주세요.</div>
+              <div className="signUpM">풍방 비밀번호를 입력해주세요.</div>
               <div style={{ display: "flex", justifyContent: "center" }}>
-                <div className="signUpDiv">
+                <div className="signUpDivM">
                   <input
                     type={this.state.visible}
-                    className="signUpInput"
+                    className="signUpInputM"
                     onChange={this.onChange}
                   />
                   {this.state.visible === "password" ? (
@@ -247,6 +247,7 @@ class Profile extends Component {
                       onClick={() => {
                         this.setState({ visible: "text" });
                       }}
+                      size="15"
                     />
                   ) : (
                     <FaEye
@@ -254,6 +255,7 @@ class Profile extends Component {
                       onClick={() => {
                         this.setState({ visible: "password" });
                       }}
+                      size="15"
                     />
                   )}
                 </div>
@@ -262,21 +264,21 @@ class Profile extends Component {
                 style={{
                   display: "flex",
                   color: "black",
-                  paddingTop: "2vh",
+                  paddingTop: "1vh",
                   alignItems: "center",
                   justifyContent: "center",
-                  fontSize: "15px",
+                  fontSize: "10px",
                 }}
               >
                 <button
-                  className="signUpButton"
+                  className="signUpButtonM"
                   onClick={() => {
                     const post = {
                       query: "SELECT * FROM PBPW;",
                     };
                     console.log(post.query);
 
-                    fetch("http://192.168.35.108:8081/SQL1", {
+                    fetch("https://hansori.net:8443/SQL1", {
                       method: "post",
                       headers: { "content-type": "application/json" },
                       body: JSON.stringify(post),
@@ -293,7 +295,7 @@ class Profile extends Component {
                               0 +
                               ");",
                           };
-                          fetch("http://localhost:8081/SQL1", {
+                          fetch("https://hansori.net:8443/SQL1", {
                             method: "post",
                             headers: { "content-type": "application/json" },
                             body: JSON.stringify(post),
@@ -318,4 +320,4 @@ class Profile extends Component {
   }
 }
 
-export default Profile;
+export default ProfileM;
