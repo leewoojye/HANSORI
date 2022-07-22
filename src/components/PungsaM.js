@@ -25,7 +25,7 @@ class PungsaM extends Component {
     this.state.article.map((atc) => {
       return (
         <div>
-          {atc.content} <br /> <br />
+          {atc.content} <br /> <br /> <br />
         </div>
       );
     });

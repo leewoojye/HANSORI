@@ -19,7 +19,7 @@ class Pungsa extends Component {
     this.state.article.map((atc) => {
       return (
         <div className="pungsaContent">
-          {atc.content} <br /> <br />
+          {atc.content} <br /> <br /> <br />
         </div>
       );
     });

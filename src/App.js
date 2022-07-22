@@ -54,7 +54,6 @@ function App() {
       <Route path="/jokbo" component={Jokbo} />
       <Route path="/profile" component={Profile} />
       <Route path="/profileM" component={ProfileM} />
-      {/* <Route path="/profile" component={Board} /> */}
       <Route path="/board" exact={true} component={Board} />
       <Route path="/boardM" exact={true} component={BoardM} />
       <Route path="/pungmul" exact={true} component={Pungmul} />

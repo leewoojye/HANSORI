@@ -7,11 +7,17 @@ import inst3 from "../asset/instruments/inst3.png";
 import inst4 from "../asset/instruments/inst4.png";
 import inst5 from "../asset/instruments/inst5.png";
 
-import sound1 from "../asset/audio/metal1.mp3";
-import sound2 from "../asset/audio/janggu1.mp3";
-import sound3 from "../asset/audio/drum1.mp3";
-import sound4 from "../asset/audio/jing1.mp3";
-import sound5 from "../asset/audio/sogo1.mp3";
+import sound1 from "../asset/audio/metal.mp3";
+import sound2 from "../asset/audio/janggu.mp3";
+import sound3 from "../asset/audio/drum.mp3";
+import sound4 from "../asset/audio/jing.mp3";
+import sound5 from "../asset/audio/sogo.mp3";
+
+import sound11 from "../asset/audio/metal1.mp3";
+import sound22 from "../asset/audio/janggu1.mp3";
+import sound33 from "../asset/audio/drum1.mp3";
+import sound44 from "../asset/audio/jing1.mp3";
+import sound55 from "../asset/audio/sogo1.mp3";
 
 const index = [0, 1, 2, 3, 4];
 function shuffle(array) {
@@ -31,13 +37,29 @@ const _inst = [
   [inst5, "소고", 4],
 ];
 
-const _sound = [
+const _sound1 = [
   new Audio(sound1),
   new Audio(sound2),
   new Audio(sound3),
   new Audio(sound4),
   new Audio(sound5),
 ];
+
+const _sound2 = [
+  new Audio(sound11),
+  new Audio(sound22),
+  new Audio(sound33),
+  new Audio(sound44),
+  new Audio(sound55),
+];
+
+const _sounds = [_sound1, _sound2];
+
+var _sound = _sound1;
+
+function setSound(soundNum) {
+  _sound = _sounds[soundNum];
+}
 
 const _size = [
   getRandomNumber(0.1, 0.2),
@@ -57,6 +79,8 @@ const _position = [
 
 function Pungmul() {
   const [size, setSize] = useState(window.innerHeight);
+  const [checkedButton, setCheckedButton] = useState(0);
+
   useEffect(() => {
     function handleResize() {
       setSize(
@@ -71,45 +95,12 @@ function Pungmul() {
     };
   }, []);
 
-  // const _i = [
-  //   [0, 0, 0, 1, 1],
-  //   [1, 0, 1, 0, 1],
-  //   [2, 0, 1, 1, 0],
-  //   [3, 1, 1, 0, 0],
-  // ];
-
-  // const showInst = () =>
-  //   _i.map((i) => {
-  //     return (
-  //       <div
-  //         className="showName"
-  //         style={{
-  //           position: "relative",
-
-  //           top: i[1] && window.innerHeight * _position[i[0]],
-  //           left: i[2] && window.innerWidth * _position[i[0]],
-  //           bottom: i[3] && window.innerHeight * _position[i[0]],
-  //           right: i[4] && window.innerWidth * _position[i[0]],
-  //         }}
-  //       >
-  //         <img
-  //           className="inst"
-  //           src={_inst[index[i[0] + 1]][0]}
-  //           alt=""
-  //           style={{ height: _size[i[0] + 1] * size, filter: "invert(100%)" }}
-  //           onClick={() => _sound[index[i[0] + 1]].play()}
-  //         />
-  //         <div className="text">{_inst[index[i[0] + 1]][1]}</div>
-  //       </div>
-  //     );
-  //   });
-
   return (
     <>
       <div
         className="contents"
         style={{
-          height: "100vh",
+          height: "90vh",
         }}
       >
         <div
@@ -201,6 +192,34 @@ function Pungmul() {
           />
           <div className="text">{_inst[index[4]][1]}</div>
         </div>
+      </div>
+      <div className="pungmulButtonDiv">
+        <button
+          className={
+            checkedButton === 0
+              ? "pungmulButton checkedButton"
+              : "pungmulButton"
+          }
+          onClick={() => {
+            setSound(0);
+            setCheckedButton(0);
+          }}
+        >
+          SOUND1
+        </button>
+        <button
+          className={
+            checkedButton === 1
+              ? "pungmulButton checkedButton"
+              : "pungmulButton"
+          }
+          onClick={() => {
+            setSound(1);
+            setCheckedButton(1);
+          }}
+        >
+          SOUND2
+        </button>
       </div>
     </>
   );

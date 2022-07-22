@@ -848,11 +848,11 @@ textarea:focus {
 }
 
 .pungsa {
-  padding-top: 3vh;
   padding-left: 7vw;
   padding-right: 7vw;
   font-family: "Hand1";
   font-size: 30px;
+  text-align: center;
 }
 
 .writeButtonDiv {
@@ -932,4 +932,29 @@ textarea:focus {
   background-color: #fff7e7;
   /* box-shadow: 0 0 5px 5px #fff7e7; */
   border-radius: 50%;
+}
+
+.pungmulButtonDiv {
+  height: 10vh;
+  background-color: #c2a789;
+  display: flex;
+}
+
+.pungmulButton {
+  width: 50vw;
+  font-family: "NamsanB";
+  font-size: 20px;
+  font-weight: bold;
+  vertical-align: middle;
+  padding: 10px;
+  background-color: #b7a99a;
+}
+
+.pungmulButton:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.checkedButton {
+  background-color: #695c4f;
 }
