@@ -195,8 +195,6 @@ function Pungmul() {
           />
           <div className="text">{_inst[index[4]][1]}</div>
         </div>
-      </div>
-      <div>
         <div className="pungmulButtonDiv">
           <button
             className="randomButton"

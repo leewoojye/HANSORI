@@ -103,7 +103,7 @@ function Pungmul() {
         className="contents"
         style={{
           height: "100vh",
-          width: "87vw",
+          width: "100vw",
         }}
       >
         <div
@@ -195,8 +195,6 @@ function Pungmul() {
           />
           <div className="text">{_inst[index[4]][1]}</div>
         </div>
-      </div>
-      <div>
         <div className="pungmulButtonDivM">
           <button
             className="randomButtonM"

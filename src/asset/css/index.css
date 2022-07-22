@@ -943,6 +943,7 @@ textarea:focus {
   font-size: 3vh;
   padding: 1.5vh;
   transition: 0.3s;
+  /* animation: buttonAnimation 0.5s ease-out; */
 }
 
 .randomButton:hover {
@@ -954,8 +955,18 @@ textarea:focus {
   transform: rotate(360deg);
 }
 
+@keyframes buttonAnimation {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(100%);
+  }
+}
+
 .pungmulButtonDiv {
   position: absolute;
+  right: 0;
   bottom: 8vh;
   width: 8vw;
   align-items: center;
@@ -1006,6 +1017,7 @@ textarea:focus {
 
 .pungmulButtonDivM {
   position: absolute;
+  right: 0;
   bottom: 4vh;
   width: 12vw;
   align-items: left;
