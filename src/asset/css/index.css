@@ -934,20 +934,45 @@ textarea:focus {
   border-radius: 50%;
 }
 
+.randomButton {
+  width: 6vh;
+  height: 6vh;
+  border-radius: 100%;
+  background-color: #00917a;
+  color: white;
+  font-size: 3vh;
+  padding: 1.5vh;
+  transition: 0.3s;
+}
+
+.randomButton:hover {
+  cursor: pointer;
+  transform: rotate(30deg);
+}
+
+.randomButton:active {
+  transform: rotate(360deg);
+}
+
 .pungmulButtonDiv {
-  height: 10vh;
-  background-color: #c2a789;
+  position: absolute;
+  bottom: 8vh;
+  width: 8vw;
+  align-items: center;
   display: flex;
+  flex-direction: column;
 }
 
 .pungmulButton {
-  width: 50vw;
-  font-family: "NamsanB";
-  font-size: 20px;
-  font-weight: bold;
-  vertical-align: middle;
-  padding: 10px;
-  background-color: #b7a99a;
+  width: 6vh;
+  height: 6vh;
+  border-radius: 100%;
+  margin-top: 4vh;
+  font-family: "NamsanM";
+  color: white;
+  font-size: 3vh;
+  padding: 1.5vh;
+  background-color: #e9d1b8;
 }
 
 .pungmulButton:hover {
@@ -956,5 +981,55 @@ textarea:focus {
 }
 
 .checkedButton {
-  background-color: #695c4f;
+  background-color: #3f3830;
+}
+
+.randomButtonM {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 100%;
+  background-color: #00917a;
+  color: white;
+  font-size: 3vh;
+  padding: 1vh;
+  transition: 0.3s;
+}
+
+.randomButtonM:hover {
+  cursor: pointer;
+  transform: rotate(30deg);
+}
+
+.randomButtonM:active {
+  transform: rotate(360deg);
+}
+
+.pungmulButtonDivM {
+  position: absolute;
+  bottom: 4vh;
+  width: 12vw;
+  align-items: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.pungmulButtonM {
+  width: 5vh;
+  height: 5vh;
+  border-radius: 100%;
+  margin-top: 3vh;
+  font-family: "NamsanM";
+  color: white;
+  font-size: 2vh;
+  padding: 1vh;
+  background-color: #e9d1b8;
+}
+
+.pungmulButtonM:hover {
+  filter: brightness(90%);
+  cursor: pointer;
+}
+
+.checkedButtonM {
+  background-color: #3f3830;
 }

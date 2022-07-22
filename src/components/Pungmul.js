@@ -19,6 +19,8 @@ import sound33 from "../asset/audio/drum1.mp3";
 import sound44 from "../asset/audio/jing1.mp3";
 import sound55 from "../asset/audio/sogo1.mp3";
 
+import { GiInvertedDice5 } from "react-icons/gi";
+
 const index = [0, 1, 2, 3, 4];
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
@@ -96,11 +98,12 @@ function Pungmul() {
   }, []);
 
   return (
-    <>
+    <div style={{ display: "flex" }}>
       <div
         className="contents"
         style={{
-          height: "90vh",
+          height: "100vh",
+          width: "92vw",
         }}
       >
         <div
@@ -193,35 +196,43 @@ function Pungmul() {
           <div className="text">{_inst[index[4]][1]}</div>
         </div>
       </div>
-      <div className="pungmulButtonDiv">
-        <button
-          className={
-            checkedButton === 0
-              ? "pungmulButton checkedButton"
-              : "pungmulButton"
-          }
-          onClick={() => {
-            setSound(0);
-            setCheckedButton(0);
-          }}
-        >
-          SOUND1
-        </button>
-        <button
-          className={
-            checkedButton === 1
-              ? "pungmulButton checkedButton"
-              : "pungmulButton"
-          }
-          onClick={() => {
-            setSound(1);
-            setCheckedButton(1);
-          }}
-        >
-          SOUND2
-        </button>
+      <div>
+        <div className="pungmulButtonDiv">
+          <button
+            className="randomButton"
+            onClick={() => window.location.reload()}
+          >
+            <GiInvertedDice5 />
+          </button>
+          <button
+            className={
+              checkedButton === 0
+                ? "pungmulButton checkedButton"
+                : "pungmulButton"
+            }
+            onClick={() => {
+              setSound(0);
+              setCheckedButton(0);
+            }}
+          >
+            1
+          </button>
+          <button
+            className={
+              checkedButton === 1
+                ? "pungmulButton checkedButton"
+                : "pungmulButton"
+            }
+            onClick={() => {
+              setSound(1);
+              setCheckedButton(1);
+            }}
+          >
+            2
+          </button>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 

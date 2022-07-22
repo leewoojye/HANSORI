@@ -13,6 +13,14 @@ import sound3 from "../asset/audio/drum.mp3";
 import sound4 from "../asset/audio/jing.mp3";
 import sound5 from "../asset/audio/sogo.mp3";
 
+import sound11 from "../asset/audio/metal1.mp3";
+import sound22 from "../asset/audio/janggu1.mp3";
+import sound33 from "../asset/audio/drum1.mp3";
+import sound44 from "../asset/audio/jing1.mp3";
+import sound55 from "../asset/audio/sogo1.mp3";
+
+import { GiInvertedDice5 } from "react-icons/gi";
+
 const index = [0, 1, 2, 3, 4];
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
@@ -31,13 +39,29 @@ const _inst = [
   [inst5, "소고"],
 ];
 
-const _sound = [
+const _sound1 = [
   new Audio(sound1),
   new Audio(sound2),
   new Audio(sound3),
   new Audio(sound4),
   new Audio(sound5),
 ];
+
+const _sound2 = [
+  new Audio(sound11),
+  new Audio(sound22),
+  new Audio(sound33),
+  new Audio(sound44),
+  new Audio(sound55),
+];
+
+const _sounds = [_sound1, _sound2];
+
+var _sound = _sound1;
+
+function setSound(soundNum) {
+  _sound = _sounds[soundNum];
+}
 
 const _size = [
   getRandomNumber(0.1, 0.2),
@@ -57,6 +81,8 @@ const _position = [
 
 function Pungmul() {
   const [size, setSize] = useState(window.innerHeight);
+  const [checkedButton, setCheckedButton] = useState(0);
+
   useEffect(() => {
     function handleResize() {
       setSize(
@@ -72,11 +98,12 @@ function Pungmul() {
   }, []);
 
   return (
-    <>
+    <div style={{ display: "flex" }}>
       <div
         className="contents"
         style={{
           height: "100vh",
+          width: "87vw",
         }}
       >
         <div
@@ -85,7 +112,7 @@ function Pungmul() {
             position: "absolute",
             top: "50%",
             left: "50%",
-            transform: "translate(-50%, -50%)",
+            transform: "translateY(-50%)",
           }}
         >
           <img
@@ -97,7 +124,6 @@ function Pungmul() {
           />
           <div className="text">{_inst[index[0]][1]}</div>
         </div>
-
         <div
           className="showName"
           style={{
@@ -170,7 +196,43 @@ function Pungmul() {
           <div className="text">{_inst[index[4]][1]}</div>
         </div>
       </div>
-    </>
+      <div>
+        <div className="pungmulButtonDivM">
+          <button
+            className="randomButtonM"
+            onClick={() => window.location.reload()}
+          >
+            <GiInvertedDice5 />
+          </button>
+          <button
+            className={
+              checkedButton === 0
+                ? "pungmulButtonM checkedButtonM"
+                : "pungmulButtonM"
+            }
+            onClick={() => {
+              setSound(0);
+              setCheckedButton(0);
+            }}
+          >
+            1
+          </button>
+          <button
+            className={
+              checkedButton === 1
+                ? "pungmulButtonM checkedButtonM"
+                : "pungmulButtonM"
+            }
+            onClick={() => {
+              setSound(1);
+              setCheckedButton(1);
+            }}
+          >
+            2
+          </button>
+        </div>
+      </div>
+    </div>
   );
 }
 
