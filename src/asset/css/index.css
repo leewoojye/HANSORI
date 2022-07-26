@@ -670,6 +670,15 @@ input:focus {
   background-color: #b1b6a0;
 }
 
+.mainDiv2M {
+  text-align: left;
+  padding: 10px;
+  color: white;
+  font-size: 35px;
+  border-radius: 0 0 0 10px;
+  /* background-color: #b1b6a0; */
+}
+
 .mainDiv3 {
   margin-left: 1vw;
   width: 34vw;

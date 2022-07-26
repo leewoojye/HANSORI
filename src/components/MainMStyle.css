@@ -1,4 +1,6 @@
-#mainm { height: 100% }
+#mainm {
+  height: 100%;
+}
 html,
 body {
   position: relative;
@@ -7,7 +9,6 @@ body {
 
 body {
   background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
   margin: 0;
@@ -16,7 +17,6 @@ body {
 
 body {
   background: #fff;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
   font-size: 14px;
   color: #000;
   margin: 0;
@@ -36,8 +36,8 @@ body {
 }
 
 .swiper {
-  width: 320px;
-  height: 640px;
+  width: 80vw;
+  height: 70vh;
 }
 
 .swiper-slide {
@@ -45,13 +45,13 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 18px;
-  font-size: 22px;
-  font-weight: bold;
+  font-family: "NamsanB";
   color: #fff;
 }
 
 .swiper-slide:nth-child(1n) {
-  background-color: rgb(255, 255, 255);
+  background-color: #d8d2c1;
+  /* background-color: rgb(255, 255, 255); */
 }
 
 .swiper-slide:nth-child(2n) {
@@ -59,7 +59,7 @@ body {
 }
 
 .swiper-slide:nth-child(3n) {
-  background-color: rgb(199, 205, 202);
+  background-color: #b1b6a0;
 }
 
 .swiper-slide:nth-child(4n) {
