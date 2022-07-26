@@ -41,30 +41,31 @@ export default class MainM extends Component {
                     <SwiperSlide
                       onClick={() => (window.location.href = "/pungmul")}
                     >
-                      <img
-                        src={instruments_white}
-                        style={{
-                          height: "65vh",
-                          // filter: "invert(100)",
-                        }}
-                      ></img>
+                      <div className="mainDiv1M">
+                        <img
+                          src={instruments_white}
+                          style={{
+                            height: "60vh",
+                            // filter: "invert(100)",
+                          }}
+                          alt=""
+                        />
+                      </div>
                     </SwiperSlide>
-                    <SwiperSlide style={{ backgroundColor: "black" }}>
-                      <img
-                        src={mainImg}
-                        alt=""
-                        className="mainImg"
-                        onClick={() => (window.location.href = "/gallery")}
-                        style={{ width: "100%" }}
-                      />
+                    <SwiperSlide
+                      onClick={() => (window.location.href = "/gallery")}
+                    >
+                      <div className=" mainDiv3M"></div>
                     </SwiperSlide>
                     <SwiperSlide
                       onClick={() => (window.location.href = "/aboutM")}
                     >
                       <div className="mainDiv2M">
-                        동국대학교 <br />
-                        공과대 <br />
-                        풍물패
+                        <div className="mainDiv2MText">
+                          동&nbsp;국&nbsp;대 <br />
+                          공&nbsp;과&nbsp;대 <br />
+                          풍&nbsp;물&nbsp;패
+                        </div>
                       </div>
                     </SwiperSlide>
                   </Swiper>
