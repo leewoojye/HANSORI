@@ -111,13 +111,7 @@ function Pungmul() {
 
   return (
     <div style={{ display: "flex" }}>
-      <div
-        className="contents"
-        style={{
-          height: "100vh",
-          width: "100vw",
-        }}
-      >
+      <div className="pungmulContents">
         <div
           className="showName"
           style={{
@@ -134,7 +128,7 @@ function Pungmul() {
             style={{ height: _size[0] * size, filter: "invert(100%)" }}
             onClick={() => _sound[index[0]].play()}
           />
-          <div className="text">{_inst[index[0]][1]}</div>
+          <div className="text ">{_inst[index[0]][1]}</div>
         </div>
         <div
           className="showName"
@@ -153,7 +147,6 @@ function Pungmul() {
           />
           <div className="text">{_inst[index[1]][1]}</div>
         </div>
-
         <div
           className="showName"
           style={{
@@ -171,7 +164,6 @@ function Pungmul() {
           />
           <div className="text">{_inst[index[2]][1]}</div>
         </div>
-
         <div
           className="showName"
           style={{
@@ -189,7 +181,6 @@ function Pungmul() {
           />
           <div className="text">{_inst[index[3]][1]}</div>
         </div>
-
         <div
           className="showName"
           style={{
@@ -207,7 +198,6 @@ function Pungmul() {
           />
           <div className="text">{_inst[index[4]][1]}</div>
         </div>
-
         {/* <div
           className="showName"
           style={{
@@ -225,7 +215,6 @@ function Pungmul() {
           />
           <div className="text">{_inst[index[5]][1]}</div>
         </div> */}
-
         <div className="pungmulButtonDivM">
           <button
             className="randomButtonM"

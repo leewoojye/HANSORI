@@ -995,6 +995,15 @@ textarea:focus {
   }
 }
 
+.pungmulContents {
+  width: 100vw;
+  height: 100vh;
+  padding-top: 20px;
+  font-size: 30px;
+  text-align: center;
+  color: white;
+}
+
 .pungmulButtonDiv {
   position: absolute;
   right: 0;
