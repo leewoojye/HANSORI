@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect } from "react";
 
+import sangmo from "../asset/header/profile.png";
+
 import inst1 from "../asset/instruments/inst1.png";
 import inst2 from "../asset/instruments/inst2.png";
 import inst3 from "../asset/instruments/inst3.png";

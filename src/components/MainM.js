@@ -13,6 +13,7 @@ import GoogleCalendar from "./GoogleCalendar";
 import mainImg from "../asset/main/main1.jpg";
 import seal from "../asset/main/seal.png";
 import instruments from "../asset/mainM/instruments.png";
+import pungsa from "../asset/pungsa/pungsa_cover.png";
 import instruments_white from "../asset/mainM/instruments_white.png";
 import AboutM from "./AboutM";
 
@@ -39,7 +40,7 @@ export default class MainM extends Component {
                     modules={[EffectCards]}
                   >
                     <SwiperSlide
-                      onClick={() => (window.location.href = "/pungmul")}
+                      onClick={() => (window.location.href = "/pungmulM")}
                     >
                       <div className="mainDiv1M">
                         <img

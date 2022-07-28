@@ -7,11 +7,15 @@ import inst3 from "../asset/instruments/inst3.png";
 import inst4 from "../asset/instruments/inst4.png";
 import inst5 from "../asset/instruments/inst5.png";
 
+import sangmo from "../asset/header/profile_white.png";
+
 import sound1 from "../asset/audio/metal.mp3";
 import sound2 from "../asset/audio/janggu.mp3";
 import sound3 from "../asset/audio/drum.mp3";
 import sound4 from "../asset/audio/jing.mp3";
 import sound5 from "../asset/audio/sogo.mp3";
+
+import mix from "../asset/audio/mix.mp3";
 
 import sound11 from "../asset/audio/metal1.mp3";
 import sound22 from "../asset/audio/janggu1.mp3";
@@ -22,6 +26,7 @@ import sound55 from "../asset/audio/sogo1.mp3";
 import { GiInvertedDice5 } from "react-icons/gi";
 
 const index = [0, 1, 2, 3, 4];
+// const index = [0, 1, 2, 3, 4, 5];
 function shuffle(array) {
   array.sort(() => Math.random() - 0.5);
 }
@@ -37,6 +42,7 @@ const _inst = [
   [inst3, "북"],
   [inst4, "징"],
   [inst5, "소고"],
+  // [sangmo, "상모"],
 ];
 
 const _sound1 = [
@@ -45,6 +51,7 @@ const _sound1 = [
   new Audio(sound3),
   new Audio(sound4),
   new Audio(sound5),
+  // new Audio(mix),
 ];
 
 const _sound2 = [
@@ -53,6 +60,7 @@ const _sound2 = [
   new Audio(sound33),
   new Audio(sound44),
   new Audio(sound55),
+  // new Audio(mix),
 ];
 
 const _sounds = [_sound1, _sound2];
@@ -69,6 +77,8 @@ const _size = [
   getRandomNumber(0.3, 0.35),
   getRandomNumber(0.1, 0.35),
   getRandomNumber(0.15, 0.25),
+  ////
+  // getRandomNumber(0.05, 0.05),
 ];
 shuffle(_size);
 
@@ -77,6 +87,8 @@ const _position = [
   getRandomNumber(0.1, 0.3),
   getRandomNumber(0.1, 0.3),
   getRandomNumber(0.1, 0.3),
+  /////
+  // getRandomNumber(0.1, 0.3),
 ];
 
 function Pungmul() {
@@ -84,17 +96,17 @@ function Pungmul() {
   const [checkedButton, setCheckedButton] = useState(0);
 
   useEffect(() => {
-    function handleResize() {
-      setSize(
-        window.innerWidth > window.innerHeight
-          ? window.innerHeight
-          : window.innerWidth
-      );
-    }
-    window.addEventListener("resize", handleResize);
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
+    // function handleResize() {
+    setSize(
+      window.innerWidth > window.innerHeight
+        ? window.innerHeight
+        : window.innerWidth
+    );
+    // }
+    // window.addEventListener("resize", handleResize);
+    // return () => {
+    //   window.removeEventListener("resize", handleResize);
+    // };
   }, []);
 
   return (
@@ -195,6 +207,25 @@ function Pungmul() {
           />
           <div className="text">{_inst[index[4]][1]}</div>
         </div>
+
+        {/* <div
+          className="showName"
+          style={{
+            position: "absolute",
+            bottom: window.innerHeight * _position[4],
+            right: window.innerWidth * _position[4],
+          }}
+        >
+          <img
+            className="inst"
+            src={_inst[index[5]][0]}
+            alt=""
+            style={{ height: _size[5] * size, filter: "invert(100%)" }}
+            onClick={() => _sound[index[5]].play()}
+          />
+          <div className="text">{_inst[index[5]][1]}</div>
+        </div> */}
+
         <div className="pungmulButtonDivM">
           <button
             className="randomButtonM"
@@ -212,9 +243,7 @@ function Pungmul() {
               setSound(0);
               setCheckedButton(0);
             }}
-          >
-            1
-          </button>
+          ></button>
           <button
             className={
               checkedButton === 1
@@ -225,9 +254,7 @@ function Pungmul() {
               setSound(1);
               setCheckedButton(1);
             }}
-          >
-            2
-          </button>
+          ></button>
         </div>
       </div>
     </div>
