@@ -38,7 +38,13 @@ export default class MainM extends Component {
                     effect={"cards"}
                     grabCursor={true}
                     modules={[EffectCards]}
+                    initialSlide={1}
                   >
+                    <SwiperSlide
+                      onClick={() => (window.location.href = "/gallery")}
+                    >
+                      <div className=" mainDiv3M"></div>
+                    </SwiperSlide>
                     <SwiperSlide
                       onClick={() => (window.location.href = "/pungmulM")}
                     >
@@ -52,11 +58,6 @@ export default class MainM extends Component {
                           alt=""
                         />
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide
-                      onClick={() => (window.location.href = "/gallery")}
-                    >
-                      <div className=" mainDiv3M"></div>
                     </SwiperSlide>
                     <SwiperSlide
                       onClick={() => (window.location.href = "/aboutM")}
