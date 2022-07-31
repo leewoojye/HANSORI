@@ -40,23 +40,23 @@ function App() {
         <Route path="/" exact={true} component={Main} />
       )}
 
-      <Route path="/about" component={About} />
-      <Route path="/gallery" component={Gallery} />
-      <Route path="/pungsa" component={Pungsa} />
-      <Route path="/jokbo" component={Jokbo} />
-      <Route path="/profile" component={Profile} />
-      <Route path="/board" exact={true} component={Board} />
-      <Route path="/pungmul" exact={true} component={Pungmul} />
-      <Route path="/pungmul/kkwaenggwari" component={Kkwaenggwari} />
-      <Route path="/pungmul/janggu" component={Janggu} />
-      <Route path="/pungmul/drum" component={Drum} />
-      <Route path="/pungmul/jing" component={Jing} />
-      <Route path="/pungmul/sogo" component={Sogo} />
+      <Route path="/About" component={About} />
+      <Route path="/Gallery" component={Gallery} />
+      <Route path="/Pungsa" component={Pungsa} />
+      <Route path="/Jokbo" component={Jokbo} />
+      <Route path="/Profile" component={Profile} />
+      <Route path="/Board" exact={true} component={Board} />
+      <Route path="/Pungmul" exact={true} component={Pungmul} />
+      <Route path="/Pungmul/Kkwaenggwari" component={Kkwaenggwari} />
+      <Route path="/Pungmul/Janggu" component={Janggu} />
+      <Route path="/Pungmul/Drum" component={Drum} />
+      <Route path="/Pungmul/Jing" component={Jing} />
+      <Route path="/Pungmul/Sogo" component={Sogo} />
       <Route path="/popup" component={popup} />
       <Route path="/history" component={history} />
-      <Route path="/board/notice/upload" component={UploadNotice} />
-      <Route path="/board/upload" component={UploadBoard} />
-      <Route path="/aboutM" component={AboutM} />
+      <Route path="/Board/notice/upload" component={UploadNotice} />
+      <Route path="/Board/upload" component={UploadBoard} />
+      <Route path="/AboutM" component={AboutM} />
       <Footer />
     </>
   );

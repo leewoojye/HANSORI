@@ -105,6 +105,7 @@ const Header = ({ location, match, history }) => {
             <NavLink className="Menu" to="/gallery">
               갤러리
             </NavLink>
+<<<<<<< Updated upstream
             <div className="dropdown">
               <NavLink className="Menu" to="/board">
                 게시판
@@ -116,6 +117,11 @@ const Header = ({ location, match, history }) => {
                 <a href="#">질문게시판</a>
               </div>
             </div>
+=======
+            <NavLink className="Menu" to="/Pungsa">
+              풍사
+            </NavLink>
+>>>>>>> Stashed changes
             <NavLink className="Menu" to="/pungmul">
               <div
                 onClick={() => {

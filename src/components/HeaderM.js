@@ -79,6 +79,33 @@ const HeaderM = ({ location, match, history }) => {
           >
             갤러리
           </NavLink>
+<<<<<<< Updated upstream
+=======
+          <br />
+          <br />
+          <NavLink
+            to="/Pungsa"
+            onClick={() => {
+              onToggle();
+            }}
+          >
+            풍사
+          </NavLink>
+          <br />
+          <br />
+          <NavLink
+            to="/Pungsa"
+            // to="/pungmul"
+            onClick={() => {
+              onToggle();
+            }}
+          >
+            풍물
+          </NavLink>{" "}
+          <br />
+          <br />
+          <img src={dots} className="headerDotsM" />
+>>>>>>> Stashed changes
         </div>
       )}
     </>

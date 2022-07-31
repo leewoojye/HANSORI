@@ -12,7 +12,7 @@ import AboutM from "./AboutM";
 export default class MainM extends Component {
   render() {
     return (
-      <ReactFullpage
+      <ReactFullpage>
         scrollOverflow={true}
         render={({ state, fullpageApi }) => (
           <div id="fullpage-wrapper">
@@ -44,7 +44,7 @@ export default class MainM extends Component {
             </div>
           </div>
         )}
-      />
+      </ReactFullpage>
     );
   }
 }
